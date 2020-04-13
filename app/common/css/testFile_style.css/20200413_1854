@@ -1,0 +1,4252 @@
+html, body {
+	overflow: auto;
+}
+
+
+.container.footMenu {
+	padding-bottom: 75px;
+
+}
+
+.container {
+	max-width: 720px;
+	margin: 0 auto;
+	position: relative;
+	min-height: 100%;
+	padding: 0;
+
+}
+
+/* ksg_20190902_2229 open : 범용 색상 구간.(ui.css 이전 필요) */
+.col_scarlet {
+    background-color: #e1776b;
+}
+.f_yellow {
+    color: #ffc90f;
+}
+.f_navy {
+    color: #273d52;
+}
+.f_scarlet {
+    color: #e1776b;
+}
+/* ksg_20190902_2229 close : 범용 색상 구간.(ui.css 이전 필요) */
+
+
+/* ksg_20190902_2225 open : 범용 popup 스타일 구간 */
+.popup {
+	display: none;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50% , -50%);
+	/* max-height: 500px; */
+	max-height: calc(100% - 15px);
+	z-index: 102;
+	padding: 0 15px;
+	overflow: auto;
+	width : 100%;
+	max-width : 420px;
+}
+
+.popup .popupCon {
+    overflow: hidden;
+    background-color: #fff;
+    padding: 3px;
+    border-radius: 3px;
+}
+.overlay:before {
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    z-index: 9;
+}
+.popup .titleBox .titleText {
+	color : #fff;
+}
+.popup .titleBox {
+	margin : 0 0 2px 0;
+	text-align : center;
+	background-color : #289bfe;
+}
+.popup .btnBox {
+	position : initial;
+}
+.popup .btnBox .btn {
+    width: 100%;
+    line-height: 50px;
+	font-size: 18px;
+	height : 45px;
+}
+
+/* ksg_20190902_2225 close : 범용 popup 스타일 구간 */
+
+
+
+.container.popup:before{
+	content: '';
+	position:absolute;
+	left:0;
+	right:0;
+	bottom:0;
+	top:0;
+	background:rgba(0,0,0,0.5);
+	z-index: 1;
+
+}
+
+.container.bg {
+	background: url("../img/img_login_bg.png") no-repeat bottom;
+	background-size: 100% auto;
+}
+
+
+.container.intro {
+	padding-bottom: 0;
+}
+
+.container.bg {
+}
+
+
+
+.contents.bg_w {
+	background-color: #fff;
+}
+
+
+.none_data_show {
+	text-align: center;
+	margin: 35% auto;
+}
+
+.none_data_show .img_box {
+	display: inline-block;
+
+}
+
+.none_data_show img {
+	width: 50%;
+	height: auto;
+}
+
+.none_data_show .txt {
+	padding-top: 25px;
+	font-size: 15px;
+	font-weight: 500;
+}
+
+
+/* common */
+header {
+	text-align: center;
+	position: relative;
+	padding: 0 20px;
+	border-bottom: 1px solid #e1e1e1;
+	height : 50px;
+}
+
+header.main {
+	border-bottom: 0;
+}
+
+header h1.logo {
+	font-size: 16px;
+	font-weight: 700;
+	display: inline-block;
+	line-height: 50px;
+}
+
+header .searchBtn,
+header .backBtn {
+	position: absolute;
+	left: 15px;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 5px;
+}
+
+
+header .backBtn .ic_back {
+	background: url("../img/icon_header_back.png") no-repeat center / cover;
+	width: 17px;
+	height: 14px;
+	vertical-align: baseline;
+
+}
+
+
+header .searchBtn .ic_search {
+	background: url("../img/icon_header_search.png") no-repeat center / cover;
+	width: 19px;
+	height: 19px;
+}
+/* ksg_20190902_1649 open : for "http://103.218.156.29/app/setting/?no=10". */
+header .headerBtn,
+header .filterBtn ,
+header .regBtn,
+header .txtBtn {
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 5px;
+}
+header .controlBtn {
+	position: absolute;
+	right: 50px;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 5px;
+}
+/* ksg_20190902_1649 close : for "http://103.218.156.29/app/setting/?no=10". */
+
+header .headerBtn .ic_header {
+	background: url("../img/icon_header_menu.png") no-repeat center / cover;
+	width: 20px;
+	height: 16px;
+}
+
+header .controlBtn .ic_control {
+	background: url("../img/icon_header_control.png") no-repeat center / cover;
+	width: 19px;
+	height: 19px;
+}
+header .filterBtn .ic_filter {
+	background: url("../img/icon_header_filter.png") no-repeat center / cover;
+	width: 18px;
+	height: 19px;
+}
+
+header .regBtn .ic_reg {
+	background: url("../img/icon_header_reg.png") no-repeat center / cover;
+	width: 19px;
+	height: 19px;
+}
+
+header .txtBtn{
+	font-size: 14px;
+	font-weight: 700;
+	color: #273d52;
+}
+
+
+header.main .logo img {
+	width: 50%;
+	height: auto;
+}
+
+header.main .header_btn_box {
+
+}
+
+header.main .alarm_btn,
+header.main .all_btn {
+	display: inline-block;
+	padding: 5px;
+	vertical-align: middle;
+	position: relative;
+}
+
+header.main .all_btn {
+	margin-left: 5px;
+}
+
+header.main .ic_alarm {
+	background: url("../img/icon_alarm.png") no-repeat center / cover;
+	width: 25px;
+	height: 26px;
+}
+
+header.main .ic_all {
+	background: url("../img/icon_all_btn.png") no-repeat center / cover;
+	width: 21px;
+	height: 17px;
+}
+
+header.main .alarm_count {
+	position: absolute;
+	right: 0px;
+	top: 3px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 16px;
+	font-size: 10px;
+	color: #fff;
+	width: 20px;
+	/*height: 16px;*/
+	background-color: #eb6696;
+	border: 1px solid #b0b0b0;
+
+}
+
+
+header .header_txt {
+	color: #202020;
+	font-size: 18px;
+	display: inline-block;
+	padding: 16px 0;
+	font-weight: 500;
+}
+
+header .back_btn {
+	position: absolute;
+	left: 10px;
+	padding: 5px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+header .ic_back {
+	background: url("../img/icon_header_back_btn.png") no-repeat center / cover;
+	width: 10px;
+	height: 15px;
+
+}
+
+
+/* common */
+
+.btnBox {
+	position: absolute;
+	bottom: 15px;
+	left: 20px;
+	right: 20px;
+}
+
+/* ksg_20190904_1857 open : for "app\setting\airInfo.php". 상단 탭 스타일 구간 */
+/* .pageTabs{
+	margin:0 -20px 0;
+	font-size: 0;
+}	::ksg */
+.pageTabs {
+	margin : 0 0 -20px; 
+	font-size : 0;
+}
+/* ksg_20190904_1857 close : for "app\setting\airInfo.php". 상단 탭 스타일 구간 */
+
+.pageTabs a{
+	position:relative;
+	line-height: 45px;
+	font-size: 14px;
+	font-weight: 700;
+	text-align: center;
+	display:inline-block;
+}
+/* ksg_20190904_1902 open : for "app\setting\airInfo.php". 상단 탭 내부 이미지 추가용 스타일 구역 */
+
+/* .pageTabs a.on:after{
+	content: '';
+	position: absolute;
+	left:0;
+	right:0;
+	bottom:0;
+	height: 5px;
+	background-color: #309eff;
+} */
+.pageTabs a.on:after {
+}
+/* ksg_20190830_2027 single : for "app\setting\airInfo.php" */
+/* .pageTabs a.box-2{
+	width: 20%;
+} */
+.pageTabs a.box-2 {
+	position : relative;
+	padding-top : 20%;
+	height : 0;
+	width : 20%;
+}
+/* ksg_20190904_1902 close : for "app\setting\airInfo.php". 상단 탭 내부 이미지 추가용 스타일 구역 */
+
+
+/* 햄버거 */
+.all_menu_wrap {
+	display: none;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 101;
+	background-color: #fff;
+}
+
+.all_menu_group {
+	position: relative;
+	text-align: left;
+	height: 100%;
+
+}
+
+/* 탑 부분 */
+.all_menu_group .tit_box {
+	padding: 15px;
+	position: relative;
+	font-size: 0;
+	border-bottom: 15px solid #f5f5f5;
+}
+
+.all_menu_group .user_info_box .profile_img {
+	border: 1px solid #e3e3e3;
+	border-radius: 50%;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: middle;
+	width: 40px;
+	height: 40px;
+}
+
+.all_menu_group .user_info_box .profile_img img {
+	width: 100%;
+	height: 100%;
+}
+
+.all_menu_group .user_info_box .user_name {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 15px;
+	font-weight: 700;
+	padding-left: 8px;
+}
+
+.all_menu_group .user_menu {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+.all_menu_group .user_menu .logout_btn,
+.all_menu_group .user_menu .close_btn {
+	padding: 5px;
+	display: inline-block;
+}
+
+.all_menu_group .user_menu .close_btn {
+	margin-left: 10px;
+}
+
+.all_menu_group .user_menu .ic_logout {
+	background: url("../img/icon_logout_btn.png") no-repeat center / cover;
+	width: 20px;
+	height: 18px;
+}
+
+.all_menu_group .user_menu .ic_close {
+	background: url("../img/icon_close_btn.png") no-repeat center / cover;
+	width: 17px;
+	height: 17px;
+}
+
+
+.all_menu_group .quick_menu {
+	font-size: 0;
+	text-align: left;
+	position: relative;
+	margin-top: 12px;
+}
+
+.all_menu_group .quick_menu a {
+	display: inline-block;
+	padding: 5px;
+	font-size: 12px;
+}
+
+.all_menu_group .quick_menu a:last-child {
+	margin-right: 0;
+}
+
+.all_menu_group .quick_menu .quick_notice {
+	padding-left: 30px;
+	background: url("../img/icon_quick_notice.png") no-repeat left center / 21.5px 17px;
+}
+
+.all_menu_group .quick_menu .quick_doc {
+	background: url("../img/icon_quick_doc.png") no-repeat left center / 14.5px 17px;
+	padding-left: 23px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+}
+
+.all_menu_group .quick_menu .quick_my {
+	background: url("../img/icon_quick_my.png") no-repeat left center / 17px 17px;
+	padding-left: 25px;
+	position: absolute;
+	right: -5px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+/* 네비게이션 부분 */
+.all_menu_group .nav_box {
+}
+
+.all_menu_group .nav_box .nav_btn {
+	display: block;
+	padding: 0 15px;
+	background: url("../img/icon_select_arrow.png") no-repeat right 15px center / 9px 15px;
+	font-size: 15px;
+	font-weight: 500;
+	border-bottom: 1px solid #b0b0b0;
+	line-height: 49px
+}
+
+
+/* 카피라이트 부분 */
+.all_menu_group .corp_box {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: #f0f0f0;
+}
+
+.all_menu_group .corp_box .link_list {
+	text-align: center;
+	font-size: 0;
+	padding: 10px 0;
+	border-bottom: 1px solid #e3e3e3;
+}
+
+.all_menu_group .corp_box .link_list a {
+	display: inline-block;
+	font-size: 12px;
+	margin: 0 10px;
+	padding: 5px 0;
+}
+
+.all_menu_group .corp_info {
+	text-align: center;
+}
+
+.all_menu_group .corp_toggle {
+	position: relative;
+	display: inline-block;
+
+	margin: 10px 0 5px;
+	padding: 5px;
+	font-size: 0;
+
+}
+
+.all_menu_group .corp_toggle .toggle_txt {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 12px;
+	padding-right: 9.5px;
+}
+
+.all_menu_group .corp_toggle:after {
+	content: '';
+	display: inline-block;
+	background: url("../img/icon_footer_down_arrow.png") no-repeat center / cover;
+	width: 10.5px;
+	height: 6px;
+	vertical-align: middle;
+	transform: rotate(0deg);
+	transition: 0.3s;
+
+}
+
+.all_menu_group .corp_toggle.on:after {
+	transform: rotate(180deg);
+	transition: 0.3s;
+}
+
+.all_menu_group .corp_con {
+	display: none;
+	background: url("../img/img_main_logo.png") no-repeat center top / 35px 20px;
+	padding: 35px 0 10px;
+}
+
+.all_menu_group .corp_con .txt {
+	font-size: 11px;
+	line-height: 15px;
+
+
+}
+
+.all_menu_group .corp_right {
+	text-align: center;
+}
+
+.all_menu_group .corp_right .kakao_btn {
+	display: inline-block;
+	padding: 5px;
+}
+
+.all_menu_group .corp_right .ic_kakao {
+	background: url("../img/icon_kakao_btn.png") no-repeat center/ cover;
+	width: 22px;
+	height: 20px;
+}
+
+.all_menu_group .corp_right .right_txt {
+	color: #b0b0b0;
+	font-size: 10px;
+	padding: 10px 0 25px;
+	font-weight: 400;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #fff;
+	text-align: center;
+	font-size: 0;
+	padding: 6.5px 5px;
+	border-top: 1px solid #ccc;
+	z-index: 100;
+
+}
+
+
+/* intro start */
+
+#intro .intro_img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 76%;
+	height: auto;
+}
+
+
+/** main start **/
+
+.setList {
+	font-size: 0;
+}
+
+.setList .setBox {
+	background: url("../img/icon_box_arrow.png") no-repeat center right 15px / 7.5px 12px;
+	box-shadow: 4px 5px 9.6px 0.4px rgba(0, 0, 0, 0.2);
+}
+/* ksg_20190904_2137 single : for "app\index.php". 추가사항. */
+.setList .setBox {
+	position : relative;
+}
+
+.setList .setBox + .setBox {
+	margin-top: 15px;
+}
+
+.setList .setBox a {
+	display: block;
+	/*padding:15px 15px 15px 56px;*/
+	padding: 15px;
+	font-size: 16px;
+}
+
+.setList .setBox a .top {
+	padding-left: 41px;
+}
+
+.setList .setBox a.highSchool .top {
+	background: url("../img/icon_highSchool.png") no-repeat left top / 29px 27px;
+}
+
+.setList .setBox a.training .top {
+	background: url("../img/icon_training.png") no-repeat left top / 25px 25px;
+
+
+}
+
+.setList .setBox .setAddr {
+	font-size: 14px;
+	margin-top: 8px;
+}
+
+.setList .setBox .bottom {
+	padding-top: 15px;
+	font-size: 0;
+}
+
+.setList .setBox .bottom .max {
+	color: #f75074;
+	font-weight: 500;
+	font-size: 12px;
+}
+
+.setList .setBox .bottom .min {
+	color: #309eff;
+	font-weight: 500;
+	font-size: 14px;
+	margin-left: 10px;
+}
+
+
+/* login */
+
+section.login .logo {
+	font-size: 20px;
+	font-weight: 400;
+	text-align: center;
+	padding: 86px 0 85px;
+}
+
+section.login .accent {
+	font-weight: 700;
+}
+
+section.login .loginGroup {
+	text-align: center;
+}
+
+section.login .loginGroup .loginBox {
+	font-size: 0;
+}
+
+section.login .loginGroup .logo_box {
+	padding: 69px 0 50px;
+}
+
+section.login .loginGroup .logo_box img {
+	width: 50%;
+	height: auto;
+}
+
+section.login .loginGroup .inputBox + .inputBox {
+	margin-top: 10px;
+}
+
+
+/* schoolSelect */
+
+
+.schoolAddrSelect {
+	font-size: 0;
+}
+
+.schoolAddrSelect .halfBox {
+	width: calc(50% - 5px);
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 13px;
+	font-weight: 500;
+}
+
+.schoolAddrSelect .halfBox + .halfBox {
+	margin-left: 10px;
+}
+
+.schoolAddrSelect .halfBox .halfName {
+	padding-bottom: 8px;
+}
+
+.schoolAddrSelect .fullBox {
+	position: relative;
+	padding: 10px 0 15px;
+}
+
+.schoolAddrSelect .fullBox .tbox {
+	padding-right: 50px;
+}
+
+.schoolAddrSelect .searchBtn {
+	position: absolute;
+	right: 10px;
+	top: 45%;
+	transform: translateY(-50%);
+	padding: 5px;
+
+}
+
+.schoolAddrSelect .searchBtn .ic_search {
+	background: url("../img/icon_searchBtn.png") no-repeat center / cover;
+	width: 20px;
+	height: 20px;
+}
+
+.schoolAddrList {
+	border-top: 1px solid #e1e1e1;
+	margin: 0 -20px;
+
+
+}
+
+.schoolAddrList .schoolAddrResultBox {
+	padding: 18px 20px;
+	border-bottom: 1px solid #e1e1e1;
+	display: block;
+	font-weight: 500;
+}
+
+.schoolAddrList .schoolAddrResultBox.on {
+	background: url("../img/icon_schoolSelect.png") no-repeat center right 20px / 15px 12px;
+}
+
+
+.schoolAddrList .schoolAddrResultBox .schoolName {
+	font-size: 13px;
+}
+
+.schoolAddrList .schoolAddrResultBox .schoolAddr {
+	padding-top: 8px;
+	font-size: 12px;
+}
+
+
+
+.schoolAddrList.arrow .schoolAddrResultBox {
+	background: url("../img/icon_box_arrow.png") no-repeat center right 20px / 7.5px 12px;
+}
+
+.schoolAddrList.top{
+	margin-top:-20px;
+	border: none;
+}
+
+/** air start */
+
+
+
+.titleBox .titleLeft,
+.titleBox .titleRight {
+	color: #fff;
+}
+
+.titleBox .titleRight {
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+
+
+
+.airStateBox .stateTit a {
+	padding: 15px 0 15px 28px;
+	display: block;
+	border-bottom: 1px solid #e1e1e1;
+	position: relative;
+}
+
+.airStateBox .stateTit a:before {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 7.5px;
+	height: 12px;
+	background: url("../img/icon_box_arrow.png") no-repeat center / cover;
+
+}
+
+
+.airStateBox .stateTit a.air {
+	background: url("../img/icon_state_air.png") no-repeat center left / 17px 16px;
+}
+.airStateBox .stateTit a.device {
+	background: url("../img/icon_state_device.png") no-repeat center left / 20px 20px;
+}
+.airStateBox .stateTit a.temperature {
+	background: url("../img/icon_state_temperature.png") no-repeat center left / 12px 16px;
+}
+
+.airStateBox .stateTit a.co2 {
+	background: url("../img/icon_state_co2.png") no-repeat center left / 21px 16px;
+}
+
+
+.airStateBox .stateShow {
+	padding: 20px 0;
+	font-size: 12px;
+	position: relative;
+	background-size: 45px 45px;
+	background-repeat: no-repeat;
+	background-position: center left;
+	border-bottom: 1px solid #e1e1e1;
+
+}	
+
+.airStateBox .stateShow.good {
+	background-image: url("../img/icon_state_show_good.png");
+}
+
+.airStateBox .stateShow.normal {
+	background-image: url("../img/icon_state_show_normal.png");
+}
+
+.airStateBox .stateShow.bad {
+	background-image: url("../img/icon_state_show_bad.png");
+}
+
+.airStateBox .stateShow.worst {
+	background-image: url("../img/icon_state_show_worst.png");
+}
+
+
+.airStateBox .stateShow.good .showState {
+	color: #0072ff;
+}
+
+.airStateBox .stateShow.normal .showState {
+	color: #85c042;
+}
+
+.airStateBox .stateShow.bad .showState {
+	color: #ffce00;
+}
+
+.airStateBox .stateShow.worst .showState {
+	color: #e01a1a;
+	left : 25px;
+}
+
+.airStateBox .showState {
+	font-size: 20px;
+	font-weight: 700;
+	padding-top: 13px;
+}
+
+
+.airStateBox .stateInfo {
+	padding: 14px 0;
+}
+
+.airStateBox .stateInfo .row {
+	position: relative;
+	font-size: 0;
+	line-height : 40px;
+}
+
+.airStateBox .stateInfo .row .subject {
+	font-size: 12px;
+}
+
+
+
+.airStateBox .stateInfo .row .con .num {
+	margin-left: 4px;
+
+}
+
+.airStateBox .stateInfo .row + .row {
+	/* margin-top: 25px; */
+}
+
+
+/** air info **/
+
+
+.airStateTabs a {
+	display: inline-block;
+	width: 25%;
+	line-height: 30px;
+	font-size: 16px;
+	font-weight: 500;
+	text-align: center;
+	position: relative;
+	height: 30px;
+}
+
+.airStateTabs a .txt {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+}
+
+.airStateTabs a.on .txt {
+	color: #fff;
+}
+
+.airStateTabs a:before {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 5px;
+	bottom: 5px;
+	background-color: #e1e1e1;
+	width: 1px;
+}
+
+.airStateTabs a.on:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	background-color: #309eff;
+	color: #fff;
+}
+
+.airStateDate {
+	text-align: center;
+	font-size: 16px;
+	font-weight: 700;
+	position: relative;
+	line-height: 16px;
+}
+.airStateTable {
+	text-align: center;
+	font-size: 16px;
+	font-weight: 700;
+	position: relative;
+	line-height: 16px;
+	padding-bottom : 10px;
+}
+
+.airStateDate .prevBtn,
+.airStateDate .nextBtn {
+	display: inline-block;
+	padding: 5px;
+}
+
+.airStateDate .prevBtn {
+	position: absolute;
+	left: -5px;
+	top: 50%;
+	transform: translateY(-50%);
+
+}
+
+.airStateDate .nextBtn {
+	position: absolute;
+	right: -5px;
+	top: 50%;
+	transform: translateY(-50%);
+
+
+}
+
+.airStateDate .ic_nextBtn {
+	background: url("../img/icon_date_next.png") no-repeat center / cover;
+	width: 10px;
+	height: 16px;
+
+}
+
+.airStateDate .ic_prevBtn {
+	background: url("../img/icon_date_prev.png") no-repeat center / cover;
+	width: 7.5px;
+	height: 12px;
+}
+
+.airStateChartInfo {
+	margin: 20px 0 0;
+	font-size: 0;
+}
+
+.airStateChartInfo .infoTxt {
+	font-size: 12px;
+	position: relative;
+	padding-left: 30px;
+}
+
+
+.airStateChartInfo .infoTxt:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 20px;
+	height: 2px;
+	background-color: #309eff;
+}
+
+.airStateChartInfo .row + .row .infoTxt:after {
+	background-color: #f75074;
+
+}
+
+.airStateChartInfo .row + .row {
+	margin-top: 10px;
+}
+.airStateChart {
+	margin-top: 15px;
+}
+
+
+/** air volume start **/
+/* ksg_20190905_0106 open : for "app\setting\modeState.php" */
+.airVolumeList {
+	margin: -20px -20px 0;
+}
+/* .airVolumeList {
+    margin:  0 10px 0 30px;
+} */
+/* ksg_20190905_0106 close : for "app\setting\modeState.php" */
+
+.airVolumeList a {
+	display: block;
+	padding: 0 20px;
+	line-height: 45px;
+	border-bottom: 1px solid #e1e1e1;
+	font-size: 16px;
+	font-weight: 500;
+	position: relative;
+
+}
+
+.airVolumeList a.hide {
+	display : none;
+}
+
+
+
+.airVolumeList a.on {
+	background: url("../img/icon_schoolSelect.png") no-repeat center right 20px / 15px 12px;
+}
+
+
+.airVolumeList .optionToggle {
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.airVolumeList .optionToggle input {
+	display: none;
+}
+
+.airVolumeList .optionToggle label span {
+	position: relative;
+	width: 55px;
+	height: 30px;
+	background-color: #eaeef1;
+	border-radius: 15px;
+}
+
+
+.airVolumeList .optionToggle label span:after {
+	content: '';
+	position: absolute;
+	width: 27px;
+	height: 27px;
+	left: 2px;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: #aaaaaa;
+	border-radius: 50%;
+	transition: ease-in 0.1s
+
+}
+
+.airVolumeList .optionToggle label input:checked ~ span {
+	background-color: #bbe2c1;
+}
+
+.airVolumeList .optionToggle label input:checked ~ span:after {
+	background-color: #37b549;
+	left: 26px;
+	transition: ease-in 0.1s
+
+}
+
+
+/** schoolState **/
+
+
+.schoolStateList {
+	margin: -20px -20px 0;
+
+}
+
+
+.schoolStateList .schoolClassBox {
+	border-bottom: 1px solid #e1e1e1;
+
+}
+
+.schoolStateList .schoolClassBox.on .classTitle a{
+	background: url("../img/icon_showBtn.png") no-repeat center right 20px / 12px 7.5px;
+
+}
+
+.schoolStateList .classTitle a {
+	font-size: 16px;
+	font-weight: 500;
+	display: block;
+	padding: 0 20px;
+	line-height: 45px;
+	background: url("../img/icon_hideBtn.png") no-repeat center right 20px / 12px 7.5px;
+}
+
+/* ksg_20190808_2124 single : for "app\filter\index.php". */
+.schoolStateList.schoolFilter .classTitle a {
+    display: block;
+    position: relative;
+    background: url(../img/icon_box_arrow.png) no-repeat center right 20px / 7.5px 12px;
+    border-bottom: 1px solid #e1e1e1;
+    padding-left: 20px;
+}
+
+
+.schoolStateList .classInfo {
+	display:none;
+	padding: 10px 0;
+	margin: 0 20px;
+	border-top: 1px solid #e1e1e1;
+}
+.schoolStateList .schoolClassBox.on .classInfo{
+	display:block;
+
+}
+
+.schoolStateList .classInfo .infoMark {
+	font-size: 0;
+	line-height : 40px;
+}
+
+
+.schoolStateList .classInfo .infoMark span {
+	display: inline-block;
+	padding-left: 16px;
+	font-size: 14px;
+	position:relative;
+}
+
+.schoolStateList .classInfo .infoMark span:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	border-radius: 50%;
+}
+
+.schoolStateList .classInfo .infoMark span + span {
+	margin-left: 10px;
+}
+
+
+.schoolStateList .classInfo .infoMark span.good:after {
+	background-color: #0072ff;
+}
+
+.schoolStateList .classInfo .infoMark span.normal:after {
+	background-color: #85c042;
+}
+
+.schoolStateList .classInfo .infoMark span.bad:after {
+	background-color: #ffce00;
+}
+
+.schoolStateList .classInfo .infoMark span.worst:after {
+	background-color: #e01a1a;
+}
+/* ksg_20190904_1614 single : 범용 off 색상 */
+.schoolStateList .classInfo .infoMark span.offStatus:after {
+    background-color: #909090;
+}
+
+/* ksg_20190904_1615 single : 만약에 대비한 구버전 */
+/* .classList{
+	margin:-10px;
+	font-size: 0;
+} */
+
+.classList .classStateBox{
+	display:inline-block;
+	vertical-align: top;
+	width: calc(25% - 20px);
+	margin:10px;
+}
+.classList .classStateBox .className{
+	padding-top: 5px;
+	font-size: 12px;
+	text-align: center;
+}
+
+/** 요청사항 **/
+.classList.type .classStateBox .classState{
+	border-radius: 50%;
+
+}
+.classList .classStateBox .classState{
+	border-radius: 20px;
+	width: 100%;
+	min-height: 75px;
+	position:relative;
+	background:url("/app/common/img/icon_class_state.png") no-repeat center top 10px / 25px 18px;
+
+}
+/* ksg_20190904_1106 single  */
+.classList .classStateBox .classState .num{
+	position:absolute;
+	bottom:25px;
+	left:0;
+	right:0;
+	text-align: center;
+	color: #fff;
+	font-size: 15px;
+	font-weight: 700;
+}
+
+
+
+/* ksg_20190808_2236 open : for "app\filter\filterState.php". 학급별 필터 주기 확인 페이지 스타일 구역 */
+.classList .classFilter {
+	font-size : 14px;
+	border-bottom : 1px solid #e1e1e1;
+	margin : 0;
+	line-height : 45px;
+	position : relative;
+}
+.classList .classFilter:last-child {
+	border-bottom : none;
+}
+.classList .classFilter span {
+	margin-left : 20px;
+}
+.classList .classFilter span + .filterState {
+	right : 20px;
+}
+.classList .classFilter .filterState  {
+	position : absolute;
+	top : 50%;
+	right : 0;
+	transform : translateY(-50%);
+}
+.classList .classFilter .filterState.singleState {
+	right : 20px;
+}
+.classList .classFilter .filterState.normal {
+	color : #85c042;
+}
+.classList .classFilter .filterState.imminent {
+	color : #e01a1a;
+}
+.classList .classFilter .filterState.expired {
+	color : #909090;
+}
+/* ksg_20190808_2236 close : for "app\filter\filterState.php". 학급별 필터 주기 확인 페이지 스타일 구역 */
+
+
+/* history start */
+.historyList{
+	margin: -20px -20px 0;
+}
+/* ksg_20190903_1937 single : for "app\work\index.php". 작업이력 페이지 구역 */
+.historyList .historyBox{
+	font-size: 14px;
+	font-weight: 500;
+	display:block;
+	position:relative;
+	padding:10px 20px;
+	background:url("../img/icon_box_arrow.png") no-repeat center right 20px/ 10px 16px;
+	border-bottom:1px solid #e1e1e1;
+}
+
+.historyList .historyBox .name{
+	position: absolute;
+	right:35px;
+	top:50%;
+	transform: translateY(-50%);
+}
+
+
+.filterGroup{
+	position:absolute;
+	left:0;
+	right:0;
+	bottom:0;
+	padding:25px 20px;
+	background-color: #fff;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	z-index: 10;
+	display:none;
+
+}
+.filterGroup .filterCloseBtn{
+	position:absolute;
+	left:50%;
+	transform: translateX(-50%);
+	top:-50px;
+	display:inline-block;
+	padding:5px;
+	z-index: 5;
+	/*width: 22PX;*/
+	/*height: 22PX;*/
+}
+.filterGroup .filterCloseBtn .ic_filterClose{
+	background:url("../img/icon_closeBtn.png") no-repeat center / cover;
+	width: 26px;
+	height: 26px;
+}
+
+.filterGroup .filterBox .filterTit{
+	font-size: 16px;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+.filterGroup .filterBox .sboxGroup{
+	font-size: 0;
+	margin:0 -10px;
+}
+.filterGroup .filterBox .sbox{
+	display:inline-block;
+	vertical-align: middle;
+	font-size: 16px;
+	width: calc(33.33% - 20px);
+	margin:0 10px;
+
+}
+.filterGroup .filterBox + .filterBox{
+	margin-top: 15px;
+}
+
+.filterGroup .filterBox .btn{
+	margin-top: 10px;
+}
+
+
+/** workInfo start **/
+
+.workInfoGroup{
+	margin:-20px -20px 0;
+}
+
+.workInfoGroup .workMenu a{
+	display:block;
+	position:relative;
+	background:url("../img/icon_box_arrow.png") no-repeat center right 20px / 7.5px 12px;
+	border-bottom:1px solid #e1e1e1;
+	padding-left:20px;
+}
+.workInfoGroup .workMenu span{
+	position:relative;
+	padding-left:25px;
+	line-height: 45px;
+	display:inline-block;
+	font-size: 15px;
+	font-weight: 500;
+}
+.workInfoGroup .workMenu span.photo{
+	background:url("../img/icon_photo.png") no-repeat center left / 19px 15px;
+}
+.workInfoGroup .workMenu span.pay{
+	background:url("../img/icon_pay.png") no-repeat center left / 17px 14px;
+
+}
+
+table.setTable tr:first-child th,
+table.setTable tr:first-child td{
+	border-top:none;
+}
+table.setTable th,
+table.setTable td{
+	border:1px solid #e1e1e1;
+	font-size: 15px;
+	text-align: center;
+	height: 45px;
+
+}
+
+table.setTable th{
+	background-color: #eaf5ff;
+	font-weight: 500;
+	font-size: 16px;
+}
+table.setTable td{
+	font-weight: 400;
+	text-align: center;
+	padding:0 10px;
+}
+table.setTable .tableSbox{
+	border:none;
+	outline: none;
+}
+table.setTable .tableSbox select{
+}
+
+table.setTable td.paddingSet{
+	padding:0 20px;
+}
+
+
+/** work photo **/
+.workPhotoGroup{
+	font-size: 0;
+	margin:-5px;
+}
+.workPhotoGroup .photoBox{
+	border:1px solid #ccc;
+	width: calc(50% - 10px);
+	margin:5px;
+	display:inline-block;
+	border-radius: 2px;
+	vertical-align: top;
+	position:relative;
+}
+.workPhotoGroup .photoBox img{
+	width: 100%;
+	height: 100%;
+}
+.workPhotoGroup .photoBox .noneImg{
+	width: 50%;
+	height: auto;
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50% , -50%);
+
+}
+.workPhotoGroup .photoBox:after{
+	display:block;
+	padding-bottom:100%;
+	content:'';
+}
+.workPhotoGroup .photoBox .inner{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+
+.settingList{
+	margin:0 -20px 0;
+}
+.settingList .settingMenu{
+	padding:0 20px;
+	display:block;
+	line-height: 45px;
+	background:url("../img/icon_box_arrow.png") no-repeat center right 20px / 10px 16px;
+	font-size: 16px;
+	font-weight: 500;
+	border-bottom:1px solid #e1e1e1;
+}
+
+
+/* ksg_20190812_1620 open : 햄버거 메뉴 관련 스타일 구역  */
+.hamburgerWrap {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background: #ffffff;
+	height: 100%;
+	width : 100%;
+    overflow: scroll;
+	right: 0px;
+	display : none;
+	z-index: 1000;
+}
+.hamburgerWrap .hamburgerHeader .ic_close  {
+    background: url(/app/common/img/icon_hamburger_close.png) no-repeat center / cover;
+    width: 16px;
+    height: 16px;
+	vertical-align: baseline;
+}
+.hamburgerWrap .hamburgerHeader {
+	position : relative;
+	border-bottom : 1px solid #e1e1e1;
+	padding : 0 20px;
+}
+
+.hamburgerWrap .hamburgerHeader .closeBtn {
+	position : absolute;
+	right : 20px;
+	top : 50%;
+	transform : translateY(-50%);
+}
+.hamburgerList .hamburgerBox {
+    border-bottom: 1px solid #e1e1e1;
+}
+.hamburgerList .hambergerTitle {
+	position : relative;
+}
+.hamburgerList .hambergerTitle a {
+    font-size: 16px;
+    font-weight: 500;
+    display: block;
+    padding: 0 20px 0 50px;
+    line-height: 45px;
+	background: url(/app/common/img/icon_box_arrow.png) no-repeat center right 20px / 10px 16px;
+	text-align : left;
+}
+.hamburgerList .hambergerTitle .hamburgerIcon {
+	position : absolute;
+	top : 50%;
+	left : 20px;
+	transform : translateY(-50%);
+	width : 17px;
+	height  : 18px;
+}
+/* ksg_20190812_1620 close : 햄버거 메뉴 관련 스타일 구역  */
+
+/* ksg_20190830_1750 open : for "app\school\index.php" 수정 구간. */
+
+/* ksg_20190830_1750 close : for "app\school\index.php" 수정 구간. */
+
+/* ksg_20190830_2009 open : for "app\setting\index.php */
+.airStateBox .stateInfo.temperature .row {
+	display : inline-block;
+	width : calc(50% - 2px);
+	vertical-align : middle;
+}
+.airStateBox .stateInfo.temperature .row .subject {
+	font-size : 20px;
+}
+.airStateBox .stateInfo.temperature .row + .row {
+	margin-top : 0;
+	text-align : right;
+	/* padding-right : 55px; */
+}
+.airStateBox .stateInfo.temperature .row .con {
+	position : initial;
+	font-size : 20px;
+}
+.airStateBox .stateInfo.temperature {
+	padding : 20px 0;
+}
+.airStateBox .stateTit a.neutralized:before {
+	background : none;
+}
+.airStateBox .stateTit a.neutralized {
+	cursor : default;
+	pointer-events : none;
+}
+/* ksg_20190907_1055 open : for "상동". 디자인 변경 관련 스타일 구역 */
+.airStateBox.half .stateShow {
+	width : 49%;
+	display : inline-block;
+	height : 100px;
+	vertical-align : top;
+	position : relative;
+	border-bottom : none;
+	background-size: 65px 65px;
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.airStateBox .deviceShow {
+	width : calc(50% - 2px);
+	display : inline-block;
+	height : 120px;
+	vertical-align : top;
+	position : relative;
+}
+.airStateBox.half .stateTit {
+	display : inline-block;
+	width : 49%;
+}
+.airStateBox.half .stateTit:first-child {
+	padding-right : 20px;
+}
+.airStateBox.half .stateTit a {
+	border-bottom : none;
+	margin-bottom : 10px;
+	font-size : 14px;
+}
+.airStateBox.half .showState {
+	position : absolute;
+	bottom : 0;
+	left : 50%;
+	transform : translateX(-50%);
+}
+.airStateBox.half .stateInfo.temperature {
+	text-align : center;
+}
+.airStateBox.half .stateInfo.temperature .row {
+	width : auto;
+}
+.airStateBox.half .stateInfo.temperature .row .subject {
+	font-size : 25px;
+}
+.airStateBox.half .stateInfo.temperature .row .con {
+	font-size : 25px;
+}
+.airStateBox.half .stateInfo.temperature .row + .row {
+	padding-left : 35px;
+}
+.airStateBox.half:last-child {
+	border-bottom : none;
+}
+.airStateBox.half .stateInfo.airCondition .row .subject {
+	font-size : 16px;
+	font-weight : 500;
+	padding-left : 28px;
+	position : relative;
+	vertical-align : middle;
+}
+.airStateBox.half .stateInfo.airCondition .row .subject:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	height: 20px;
+    width: 20px;
+}
+.airStateBox.half .stateInfo.airCondition .row .subject.co2:after {
+	background: url(/app/common/img/icon_stateType_Co2.png) no-repeat center / 20px 20px;
+}
+.airStateBox.half .stateInfo.airCondition .row .subject.dust:after {
+	background: url(/app/common/img/icon_stateType_dust.png) no-repeat center / 20px 20px;
+}
+.airStateBox.half .stateInfo.airCondition .row .subject.superDust:after {
+	background: url(/app/common/img/icon_stateType_superDust.png) no-repeat center / 20px 20px;
+}
+.airStateBox.half .stateInfo.airCondition .row .subject.radon:after {
+	background: url(/app/common/img/icon_stateType_radon.png) no-repeat center / 20px 20px;
+}
+.airStateBox.half .stateInfo.airCondition .row .subject.voc:after {
+	background: url(/app/common/img/icon_stateType_VOC.png) no-repeat center / 20px 20px;
+}
+.airStateBox.half .stateInfo.airCondition .row .con {
+	text-align : right;
+}
+.airStateBox.half .stateInfo.airCondition .row a {
+	width : 100%;
+	height : 100%;
+	display : block;
+}
+.airStateBox.half .stateInfo.airCondition .row .con .num {
+	min-width :90px;
+	display : inline-block;
+	padding-right : 23px;
+	position : relative;
+}
+.airStateBox.half .stateInfo.airCondition .row .con .num:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 7.5px;
+	height: 12px;
+	background: url(/app/common/img/icon_box_arrow.png) no-repeat center / cover;
+}
+.airStateBox.half .stateShow.devicePower.strong {
+	background-image: url(/app/common/img/icon_devicePower_strong.png);
+}
+.airStateBox.half .stateShow.devicePower.medium {
+	background-image: url(/app/common/img/icon_devicePower_medium.png);
+}
+.airStateBox.half .stateShow.devicePower.light {
+	background-image: url(/app/common/img/icon_devicePower_light.png);
+}
+.airStateBox.half .stateShow.devicePower.pause {
+	background-image: url(/app/common/img/icon_devicePower_pause.png);
+}
+.airStateBox.half .stateShow.devicePower.off {
+	background-image: url(/app/common/img/icon_devicePower_off.png);
+}
+
+/* ksg_20190911_0410 open : for "상동". 수정 디자인 관련 스타일 */
+.airStateBox.statusBG .stateTit {
+	width :calc(100% - 20px);
+	padding : 15px 0 20px 50px;
+}
+
+.airStateBox.statusBG .stateTit.deviceStatus {
+	position: absolute;
+    bottom: 10px;
+    padding: 0;
+    line-height: 0px;
+	height: 13%;
+	font-size : 16px;
+	font-weight : 500;
+}
+.airStateBox.statusBG .stateInfo.temperature {
+	width : 49%;
+	display : inline-block;
+	padding : 0;
+	height : 115px;
+	overflow : hidden;
+}
+.airStateBox.statusBG .stateTit a {
+	display : inline-block;
+	position : relative;
+	width : calc(100% - 40px);
+	height : 100%;
+}
+/* .airStateBox.statusBG .stateTit a div {
+	position : absolute;
+	right : 5px;
+}	::ksg */
+.airStateBox.statusBG .showState {
+	position : absolute;
+	bottom : 0;
+	left : 45px;
+	font-size :25px;
+}
+.airStateBox.statusBG div.air.titTxt {
+	font-size : 14px;
+}
+.airStateBox.statusBG .stateShow {
+	padding : 0;
+	height : 115px;
+	background-position: top left 32px;
+	background-size: 75px 75px;
+	border-bottom : none;
+	width : 49%;
+	display : inline-block;
+}
+.airStateBox .stateInfo.airCondition {
+	padding : 0;
+}
+.airStateBox .stateInfo.temperature .titleNum {
+	font-size : 45px;
+	text-align : center;
+	font-weight : 800;
+}
+.airStateBox.statusBG .stateInfo.temperature .row {
+	width :100%;
+	text-align : center;
+	padding : 15px 0;
+}
+.airStateBox.statusBG .stateInfo.temperature .row .subject {
+	font-size : 15px;
+}
+.airStateBox.statusBG .stateInfo.temperature .row .con {
+	font-size : 15px;
+}
+.airStateBox.statusBG .stateTit a:before {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 7.5px;
+    height: 12px;
+    background: url(/app/common/img/icon_box_arrow.png) no-repeat center / cover;
+}
+.airStateBox.statusBG .stateTit a {
+	border-bottom : 0;
+}
+.airStateBox .stateInfo.airCondition .row .con {
+	font-size : 16px;
+	font-weight : 500;
+	right : 20px;
+}
+.airStateBox .stateInfo.airCondition .row {
+	border-bottom : 1px solid #e1e1e1;
+	padding : 5px 20px;
+	margin : 0 -20px;
+}
+div.updateTime {
+	padding-top : 10px;
+	text-align : right;
+	display : block;
+	font-size : 12px;
+	vertical-align : middle;
+}
+div.updateTime span:first-child {
+	font-weight : 600;
+	font-size : 13px;
+}
+/* ksg_20190911_0410 close : for "상동". 수정 디자인 관련 스타일 */
+
+/* ksg_20190907_1055 close : for "상동". 디자인 변경 관련 스타일 구역 */
+
+/* :: 운전 상태 아이콘 표시 관련 구간 */
+.deviceState {
+	padding-left : 40px;
+	position : relative;
+}
+.deviceState:before {
+	content: '';
+	position: absolute;
+	left : 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 24px;
+	height: 24px;
+}
+.deviceState.strong:before {
+	background: url(/app/common/img/icon_devicePower_strong.png) no-repeat center / 24px 24px;
+}
+.deviceState.medium:before {
+	background: url(/app/common/img/icon_devicePower_medium.png) no-repeat center / 24px 24px;
+}
+.deviceState.light:before {
+	background: url(/app/common/img/icon_devicePower_light.png) no-repeat center / 24px 24px;
+}
+.deviceState.pause:before {
+	background: url(/app/common/img/icon_devicePower_pause.png) no-repeat center / 24px 24px;
+}
+.deviceState.OFF:before {
+	background: url(/app/common/img/icon_devicePower_off.png) no-repeat center / 24px 24px;
+}
+.airStateBox.statusBG .stateTit a div {
+	right : 15px;
+	position : absolute;
+}
+/* ksg_20190830_2009 close : for "app\setting\index.php */
+
+/* ksg_20190830_2214 open : for "app\setting\airInfo_month.php" and "app\setting\airInfo.php" */
+
+.tableBox .listTable {
+	font-size : 14px;
+}
+.tableBox .listTable th {
+	font-weight : 600;
+	border-right : 1px solid #e1e1e1;
+	background-color :  #eaf5ff ;
+}
+.tableBox .listTable th:last-child {
+	border-right : none;
+}
+.tableBox .listTable td {
+	text-align : center;
+	border : 1px solid #e1e1e1;
+}
+.tableBox .listTable:last-child td {
+	border-bottom : none;
+}
+.tableBox .listTable td:first-child {
+	border-left : none;
+}
+.tableBox .listTable td:last-child {
+	border-right : none;
+}
+.tableBox .listTable th,
+.tableBox .listTable td {
+	padding : 5px 0;
+}
+.tableBox .listTable .firstLine {
+	background-color : #eaf5ff;
+}
+.airCalculation {
+	font-size : 0;
+	margin : 0 0 10px 0;
+}
+.airCalculation div {
+	display : inline-block;
+	width : 33.33%;
+	font-size : 13px;
+}
+.airCalculation div span:first-child {
+	font-weight : 500;
+}
+.airCalculation div.calculationHigh {
+	text-align : left;
+}
+.airCalculation div.calculationAvr {
+	text-align : center;
+}
+.airCalculation div.calculationLow {
+	text-align : right;
+}
+.tableBox {
+	margin : 0 -20px;
+}
+.tableBox .airUnit {
+	font-size : 14px;
+	padding : 7px 0;
+	margin-left : 10px;
+}
+.airStateBox.monthlyAir .stateInfo .row + .row {
+	margin-top : 15px;
+}
+.airStateBox.monthlyAir {
+	margin-bottom : 5px;
+}
+/* ksg_20190830_2214 close : for "app\setting\airInfo_month.php" and "app\setting\airInfo.php" */
+
+/* ksg_20190802_1022 open : for "app\setting\airInfo.php" */
+/* :: 공기질 최고~최저 표시 구간 */
+.airStateBox.horizontalState .stateInfo .row + .row {
+	margin-top : 0px;
+}
+/* .airStateBox.horizontalState {
+	margin-bottom : 5px;
+}  ::ksg */
+/* ksg_20190904_2024 open : for "app\setting\airInfo.php" . 최고/평균 2개만 표시 스타일 구역 */
+/* .airStateBox.horizontalState .stateInfo .row {
+	width : calc(33.33% - 2.5px);
+	display : inline-block;
+}	::ksg */
+.airStateBox.horizontalState .stateInfo .row {
+	width: calc(50% - 2px);
+	display: inline-block;
+}
+/* ksg_20190904_2024 close : for "app\setting\airInfo.php" . 최고/평균 2개만 표시 스타일 구역 */
+
+.airStateBox.horizontalState .stateInfo .row .con {
+	position : initial;
+	padding-left : 4px;
+}
+
+.airStateBox.horizontalState .stateInfo .row:first-child {
+	text-align : left;
+}
+/* ksg_20190904_2022 open : for "app\setting\airInfo.php". 최고/평균 2개 표시 스타일 구역 */
+/* .airStateBox.horizontalState .stateInfo .row:nth-child(2) {
+	text-align : center;
+}	::ksg */
+.airStateBox.horizontalState .stateInfo .row:nth-child(2) {
+	text-align : right;
+}
+/* .airStateBox.horizontalState .stateInfo .row:nth-child(3) {
+	text-align : right;
+}	::ksg */
+/* ksg_20190904_2022 close : for "app\setting\airInfo.php". 최고/평균 2개 표시 스타일 구역 */
+
+/* 상단 탭 구간 */
+.pageTabs a.box-2:before {
+	content : "";
+	position : absolute;
+	top : 23%;
+	left  : 50%;
+	transform : translateX(-50%);
+	height : 25px;
+	width : 25px;
+}
+.pageTabs a.box-2.stateType_co2:before {
+	background: url(/app/common/img/icon_stateType_Co2.png) no-repeat center / 25px 25px;
+}
+.pageTabs a.box-2.stateType_dust:before {
+	background: url(/app/common/img/icon_stateType_dust.png) no-repeat center / 25px 25px;
+}
+.pageTabs a.box-2.stateType_superDust:before {
+	background: url(/app/common/img/icon_stateType_superDust.png) no-repeat center / 25px 25px;
+}
+.pageTabs a.box-2.stateType_voc:before {
+	background: url(/app/common/img/icon_stateType_VOC.png) no-repeat center / 25px 25px;
+}
+.pageTabs a.box-2.stateType_radon:before {
+	background: url(/app/common/img/icon_stateType_radon.png) no-repeat center / 25px 25px;
+}
+.pageTabs a.box-2 span {
+	position : absolute;
+	bottom : 20%;
+	left  : 50%;
+	transform : translateX(-50%);
+	width : 100%;
+	font-size : 16px;
+	line-height : 16px;
+}
+
+.pageTabs a.on.box-2 span {
+	color : #f75074;
+}
+.pageTabs a.on.box-2:before {
+	background: url(/app/common/img/icon_stateType_Co2_on.png) no-repeat center / 25px 25px;
+}
+
+.pageTabs a.on.box-2.stateType_co2:before {
+	background: url(/app/common/img/icon_stateType_Co2_on.png) no-repeat center / 25px 25px;
+}
+.pageTabs a.on.box-2.stateType_dust:before {
+	background: url(/app/common/img/icon_stateType_dust_on.png) no-repeat center / 25px 25px;
+}
+.pageTabs a.on.box-2.stateType_superDust:before {
+	background: url(/app/common/img/icon_stateType_superDust_on.png) no-repeat center / 25px 25px;
+}
+.pageTabs a.on.box-2.stateType_voc:before {
+	background: url(/app/common/img/icon_stateType_VOC_on.png) no-repeat center / 25px 25px;
+}
+.pageTabs a.on.box-2.stateType_radon:before {
+	background: url(/app/common/img/icon_stateType_radon_on.png) no-repeat center / 25px 25px;
+}
+@media screen and (max-width : 400px) {
+	.pageTabs a.box-2 span {
+	    position: absolute;
+	    bottom: 5%;
+	    left: 50%;
+	    transform: translateX(-50%);
+	    width: 100%;
+	    font-size: 2.889vw;
+	    line-height: 2.889vw;
+	}
+	div.deviceSetting a span {
+		position: absolute;
+    	bottom: 15%;
+    	left: 50%;
+    	transform: translateX(-50%);
+    	width: 100%;
+    	font-size: 2.889vw;
+	    line-height: 2.889vw;
+	}
+
+}
+/* ksg_20190802_1022 close : for "app\setting\airInfo.php" */
+
+/* ksg_20190902_2218 open : for "app\work\workInfo.php" */
+.workList .workInfoGroup {
+	margin : 0;
+	border-top : 1px solid #e1e1e1;
+	/* border-bottom : 5px solid #e1e1e1; ::ksg */
+}
+.schoolStateList.workList {
+	margin : 0 -20px 0;
+}
+.schoolStateList.workList .schoolClassBox.on:last-child {
+	border-bottom  : none;
+}
+.workHistory div {
+	display : inline-block;
+	overflow : hidden;
+	text-overflow : ellipsis;
+	white-space : nowrap;
+	vertical-align : middle;
+	height : 45px;
+}
+/* ksg_20190903_1640 open : 항목 길이 분배 구간 */
+.workHistory div:first-child {
+	text-align : left;
+	width : 65%;
+}
+/* .workHistory div:nth-child(2) {
+	text-align : center;
+	width : 20%;
+}  ::ksg */
+
+.workHistory div:last-child {
+	text-align : right;
+	width : 20%;
+}
+/* ksg_20190903_1640 close : 항목 길이 분배 구간 */
+
+.workInfoGroup .workMenu div.workImg {
+	display: block;
+	position: relative;
+	border-bottom: 1px solid #e1e1e1;
+	padding-left: 20px;
+	min-height : 50px;
+}
+/* .popup div.imgView img {
+	width : 100%;
+}
+.popup div.thumbnail {
+	font-size : 0;
+	padding : 2px 0 4px 0;
+}
+.popup.workImgPop .thumbnailBox {
+	width : 25%;
+	padding-top : 25%;
+	position : relative;
+	border : 1px solid #fff;
+	display : inline-block;
+	overflow : hidden;
+}
+.popup.workImgPop .thumbnail img {
+	width : 100%;
+	height : 100%;
+	position : absolute;
+	top : 0;
+} ::ksg */
+.thumbnail img:hover {
+	border : 3px solid #289bfe;
+}
+.workInfoGroup .workMenu.photoMenu a {
+	border-bottom : none;
+	background : none;
+	cursor : default;
+	pointer-events : none;
+}
+.photoGroup {
+	padding : 0 10px 10px 10px;
+}
+.photoGroup div.imgView {
+	position : relative;
+	width : 100%;
+	padding-top : 100%;
+	background-color : #ccc;
+}
+.photoGroup div.imgView img {
+	width : 100%;
+	height : 100%;
+	position : absolute;
+	top : 0;
+	left : 0;
+}
+.photoGroup div.thumbnail {
+	font-size : 0;
+	padding : 2px 0 4px 0;
+}
+.photoGroup .thumbnailBox {
+	width : 25%;
+	padding-top : 25%;
+	position : relative;
+	border : 1px solid #fff;
+	display : inline-block;
+	overflow : hidden;
+}
+.photoGroup .thumbnail img {
+	width : 100%;
+	height : 100%;
+	position : absolute;
+	top : 0;
+}
+/* ksg_20190902_2218 close : for "app\work\workInfo.php" */
+
+/* ksg_20190903_1935 open : for "app\work\index.php". 작업이력 스타일 구역  */
+.historyInfo {
+	display : inline-block;
+	vertical-align : middle; 
+}
+.historyInfo:first-child {
+	width : calc(100% - 175px);
+	font-size : 16px;
+}
+.historyInfo:last-child {
+	width : 150px;
+	text-align : right;
+	line-height : 16px;
+}
+/* ksg_20190903_1935 close : for "app\work\index.php". 작업이력 스타일 구역  */
+
+/* ksg_20190904_0224 open : for "app\setting\deviceState.php". 장비 상태 스타일 구역 */
+
+.deviceStateTabs a {
+	display: inline-block;
+    width: 50%;
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    height: 30px;
+}
+
+
+
+.deviceStateTabs a .txt {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.tableBox.calendarBox .listTable th, 
+.tableBox.calendarBox .listTable td {
+	line-height : 20px;
+	/* padding : 10px 0; */
+}
+.tableBox.calendarBox .listTable td {
+	position : relative;
+	height : 50px;
+}
+.tableBox.calendarBox .listTable th:first-child,
+.tableBox.calendarBox .listTable tr td:first-child div {
+	color : #e40303;
+}
+.tableBox.calendarBox .listTable td div:first-child {
+	position : absolute;
+	top : 5px;
+	left : 50%;
+	transform : translateX(-50%);
+}
+.tableBox.calendarBox .listTable td div:nth-child(2) {
+	position : absolute;
+	bottom : 5px;
+	left : 50%;
+	transform : translateX(-50%);
+	color : #202020 !important;
+	width : 100%;
+}
+.tableBox.calendarBox .listTable th:last-child,
+.tableBox.calendarBox .listTable tr td:last-child div {
+	color : #2001e0;
+}
+.pageTabs a.box-2.devicePower_strong:before {
+	background: url(/app/common/img/icon_devicePower_strong.png) no-repeat center / 20px 20px;
+}
+.pageTabs a.on.box-2.devicePower_strong:before {
+	background: url(/app/common/img/icon_devicePower_strong_on.png) no-repeat center / 20px 20px;
+}
+.pageTabs a.box-2.devicePower_medium:before {
+	background: url(/app/common/img/icon_devicePower_medium.png) no-repeat center / 20px 20px;
+}
+.pageTabs a.on.box-2.devicePower_medium:before {
+	background: url(/app/common/img/icon_devicePower_medium_on.png) no-repeat center / 20px 20px;
+}
+.pageTabs a.box-2.devicePower_light:before {
+	background: url(/app/common/img/icon_devicePower_light.png) no-repeat center / 20px 20px;
+}
+.pageTabs a.on.box-2.devicePower_light:before {
+	background: url(/app/common/img/icon_devicePower_light_on.png) no-repeat center / 20px 20px;
+}
+.pageTabs a.box-2.devicePower_pause:before {
+	background: url(/app/common/img/icon_devicePower_pause.png) no-repeat center / 20px 20px;
+}
+.pageTabs a.on.box-2.devicePower_pause:before {
+	background: url(/app/common/img/icon_devicePower_pause_on.png) no-repeat center / 20px 20px;
+}
+.pageTabs a.box-2.devicePower_off:before {
+	background: url(/app/common/img/icon_devicePower_off.png) no-repeat center / 20px 20px;
+}
+.pageTabs a.on.box-2.devicePower_off:before {
+	background: url(/app/common/img/icon_devicePower_off_on.png) no-repeat center / 20px 20px;
+}
+
+/* ksg_20190912_1708 inner : 상단 풍량 및 장비설정 버튼 구역 */
+
+div.deviceSetting {
+	display: inline-block;
+    width: 19%;
+    position: relative;
+    padding-top: 16%;
+}
+div.deviceSetting a.deviceSet_icon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+div.deviceSetting a span {
+	position: absolute;
+    bottom: 23%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    font-size: 13px;
+    line-height: 13px;
+	text-align : center;
+}
+/* div.deviceSetting a:before {
+	content: "";
+    position: absolute;
+    top: 23%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 20px;
+    width: 20px;
+	background : url(/app/common/img/icon_state_device.png) no-repeat center / 20px 20px;
+} :: ksg */
+@media screen and (max-width : 400px) {
+	div.deviceSetting a span {
+		position: absolute;
+    	bottom: 15%;
+    	left: 50%;
+    	transform: translateX(-50%);
+    	width: 100%;
+    	font-size: 2.889vw;
+	    line-height: 2.889vw;
+	}
+}
+
+/* ksg_20190917_1637 open : inner */
+.pageTabs.devicePowerTabs div.deviceSetting {
+	position : absolute;
+	padding-top : 0;
+	width : auto;
+	top : 50%;
+	transform : translateY(-50%);
+	right : 0;
+}
+.pageTabs.devicePowerTabs .devicePresent {
+	font-size : 18px;
+	font-weight : 500;
+}
+.pageTabs.devicePowerTabs .deviceSetting {
+	font-size : 0;
+}
+
+.pageTabs.devicePowerTabs .deviceSetting a.btn + a.btn {
+	margin-left : 10px;
+}
+/* ksg_20190917_1637 close : inner */
+
+/* ksg_20190904_0224 close : for "app\setting\deviceState.php". 장비 상태 스타일 구역 */
+
+/* ksg_20190904_1613 open : for "app\school\index.php". 리스트 형식(신형)의 학교상태 스타일 구간 */
+.classList .classStateInfo {
+	width : 100%;
+	position : relative;
+	border-bottom : 1px solid #e1e1e1;
+	line-height : 40px;
+}
+.classList .classStateInfo:last-child {
+	border-bottom : none;
+}
+.classList .classStateInfo .className {
+	display : inline-block;
+	/* font-size : 16px; ::ksg_20190919_1712 */
+	width : calc(100% - 200px);
+}
+.classList .classStateInfo .classState {
+	display : inline-block;
+	width : 190px;
+	position : relative;
+}
+.classList .classStateInfo .stateType_class {
+	position : absolute;
+	top : 50%;
+	transform : translateY(-50%);
+	right : 50px;
+	width : 130px;
+}
+.classList .classStateInfo .stateType_class span {
+	position :relative;
+	padding : 0 7px 0 18px;
+}
+.classList .classStateInfo .stateType_class:after {
+	content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+	border-radius: 50%;
+}
+.classList .classStateInfo .stateType_class.offStatus:after {
+	background-color: #909090;
+}
+.classList .classStateInfo .stateType_class.worst:after {
+	background-color: #e01a1a;
+}
+.classList .classStateInfo .stateType_class.bad:after {
+	background-color: #ffce00;
+}
+.classList .classStateInfo .stateType_class.normal:after {
+	background-color: #85c042;
+}
+.classList .classStateInfo .stateType_class.good:after {
+	background-color: #0072ff;
+}
+.classList .classStateInfo .num_class {
+	position : absolute;
+	right : 0;
+    top: 50%;
+	transform: translateY(-50%);
+	font-weight : 600;
+}
+.classStateInfo {
+	font-size : 16px;
+}
+.classList {
+    margin : -10px 0;
+    font-size: 0;
+}
+
+/* ksg_20191007_1117 open : inner */
+/* 고객센터 전화 파트 스타일 구역 */
+.csCallBox {
+	position: fixed;
+    width: 100%;
+    height: 120px;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    padding: 25px 20px;
+    font-size: 0;
+    text-align: center;
+    border-top: 1px solid #e1e1e1;
+    background-color: #fff;
+}
+.schoolState .schoolStateList {
+	margin-bottom : 99px;
+}
+.csCallBox .csCallLink {
+	width : auto;
+	height : auto;
+	display : inline-block;
+}
+.csCallBox .csCallLink .csCallNumber {
+	font-size : 25px;
+	font-weight : 500;
+	display : inline-block;
+	vertical-align : middle;
+	padding-left : 9px;
+}
+.csCallBox .csCallLink .csCallIcon {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.csCallBox .csCallInfo {
+	padding-top : 10px;
+	font-size : 0;
+	line-height : 0;
+}
+
+.csCallBox .csCallInfo .csTime {
+	font-size : 12px;
+	line-height :18px;
+}
+
+/* ksg_20191007_1117 close : inner */
+
+/* ksg_20190904_1613 close : for "app\school\index.php". 리스트 형식(신형)의 학교상태 스타일 구간 */
+
+
+/* ksg_20190904_1156 open : for "http://103.218.156.29/app/school/?no=6". 박스 내부 크기를 위한 임시 스타일. 페이지 수정 후 삭제 예정. */
+.classList .classStateBox .classState .num {
+	font-size : 3.2vw;
+	
+}
+.classList .classStateBox .classState {
+	padding-top : 100%;
+	background: url(/app/common/img/icon_class_state.png) no-repeat center top 2vw / 8vw 6vw;
+}
+.classList .classStateBox .classState .num {
+	bottom : 6vw;
+}
+.schoolStateList .schoolClassBox .stateType {
+	font-size: 2vw;
+	bottom: 2vw;
+}
+
+@media screen and (min-width: 800px) {
+	.classList .classStateBox .classState .num {
+		font-size : 20px;
+		
+	}
+	.classList .classStateBox .classState {
+		padding-top : 100%;
+		background: url(/app/common/img/icon_class_state.png) no-repeat center top 20px / 60px 45px;
+	}
+	.classList .classStateBox .classState .num {
+		bottom : 50px;
+	}
+	.schoolStateList .schoolClassBox .stateType {
+		font-size: 15px;
+		bottom: 20px;
+	}
+}
+/* ksg_20190904_1156 close : for "http://103.218.156.29/app/school/?no=6". 박스 내부 크기를 위한  임시 스타일. 페이지 수정 후 삭제 예정. */
+
+/* ksg_20190904_2136 open : for "app\index.php" */
+/* 별표 표시 구간 */
+
+a.favorite {
+	position : absolute;
+	top : 17%;
+	right : 3px;
+	transform : translateY(-50%); 
+	background : url(/app/common/img/icon_bookmark_off.png) no-repeat center / 20px 20px;
+	width : 20px;
+	height : 20px;
+	padding : 0;
+	z-index : 999;
+}
+a.favorite.on {
+	background : url(/app/common/img/icon_bookmark_on.png) no-repeat center / 20px 20px;
+}
+/* 등록된 리스트 없을 때의 안내문 구간 */
+.setList_none {
+	position : absolute;
+	top : 50%;
+	left : 0;
+	transform : translateY(-50%);
+	width : 100%;
+	text-align : center;
+}
+/* ksg_20190904_2136 close : for "app\index.php" */
+
+/* ksg_20190905_0103 open : for "app\setting\modeState.php". */
+.airVolumeList.autoVolume {
+	margin : -20px -20px 55px -20px;
+	border-bottom : 1px solid #e1e1e1;
+}
+.airVolumeList a:last-child {
+	border-bottom : none;
+}
+.airVolumeList.gradeSet,
+.airVolumeList.volumeSet {
+	margin : 0 15px 0 15px;
+}
+/* .airVolumeList.gradeSet .optionToggle,
+.airVolumeList.volumeSet .optionToggle {
+	right : 5px;
+} ::ksg */
+
+/* 시간 선택창 구간 */
+.volumeTitle {
+	border-top: 1px solid #ccc;
+    padding: 20px 10px 5px 10px;
+    font-weight: 600;
+    font-size: 17px;
+}
+.airState .offTimeBox {
+	padding : 5px 20px;
+	font-size : 13px;
+}
+.airState .offTimeBox div + div {
+	padding-top : 5px;
+}
+.airState .workTime {
+    font-size: 13px;
+	vertical-align: middle;
+	display : inline-block;
+}
+.airState .workTime span {
+	padding: 0 3px;
+	vertical-align : middle;
+}
+.sbox.timePicker {
+	line-height : 30px;
+	vertical-align : middle;
+}
+.sbox.timePicker select {
+	height : 30px;
+	vertical-align : middle;
+}
+
+
+
+.sbox.timePicker select[name="workSTime_hour"],
+.sbox.timePicker select[name="workSTime_minute"],
+.sbox.timePicker select[name="workETime_hour"],
+.sbox.timePicker select[name="workETime_minute"] {
+	width : 70px;
+	padding: 0 20px 0 15px;
+}
+
+.offTimeBox span {
+	vertical-align : middle;
+}
+.airState .workTime span {
+	display : inline-block;
+}
+/* ksg_20190905_0103 close : for "app\setting\modeState.php". */
+
+/* ksg_20190905_0248 open : for "app\setting\errorState.php" */
+.schoolStateList.errorList {
+	margin: 0px -20px 0;
+}
+.errorList .errorInfoGroup {
+	margin: 0;
+    border-top: 1px solid #e1e1e1;
+}
+.errorInfo div:first-child {
+    text-align: left;
+    width: 70%;
+}
+.errorInfo div:last-child {
+    text-align: right;
+    width: 22%;
+}
+.errorInfo div {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+    height: 45px;
+}
+/* ksg_20190905_0248 close : for "app\setting\errorState.php" */
+
+/* 미세먼지 기준 바 구간 */
+.statusBar {
+	margin-top : 30px;
+	margin-bottom : 20px;
+	position : relative;
+}
+.statusBar.on {
+	display : block;
+}
+.statusBar img {
+	width : 100%;
+}
+/* ksg_20190909_1418 open : for "app\setting\airInfo.php" */
+/* 기준표 색상 및 숫자 구간 */
+.statusBar .statusText {
+	position : absolute;
+	top : 65%;
+	transform : translateY(-50%);
+	font-size : 2.889vw;
+}
+.statusBar .statusText.good {
+	right : 76%;
+	color : #0071FF;
+}
+.statusBar .statusText.normalStart {
+	left : 32%;
+	color : #87C246;
+}
+.statusBar .statusText.normalEnd {
+	right : 50.5%;
+	color : #87C246;
+}
+.statusBar .statusText.badStart {
+	left : 57%;
+	color : #FFCE00;
+}
+.statusBar .statusText.badEnd {
+	right : 25.5%;
+	color : #FFCE00;
+}
+.statusBar .statusText.worst {
+	right : 0%;
+	color : #DF1A1A;
+}
+/* ksg_20190917_1036 open : inner */
+/* 차트 좌측 단위값 구역 */
+
+section.airState .chartBox .chartVerticalLabels div {
+	position : absolute;
+	font-size : 10px;
+	left : -12px;
+}
+section.airState .chartBox .chartVerticalLabels div.labelWorst {
+	top : 0;
+}
+section.airState .chartBox .chartVerticalLabels div.labelBad {
+	top : 29%;
+}
+section.airState .chartBox .chartVerticalLabels div.labelNormal {
+	top : 58%;
+}
+section.airState .chartBox .chartVerticalLabels div.labelGood {
+	top : 87%;
+}
+/* ksg_20190917_1036 close : inner */
+
+/* ksg_20190918_0320 open : inner */
+/* 표 스크롤 구간 */
+.tableBox.scrollAble {
+	width: calc(100% + 40px);
+    overflow-x: scroll;
+}
+.tableBox.scrollAble .listTable {
+	width : 800px;
+}
+/* ksg_20190918_0320 close : inner */
+
+
+/* ksg_20190909_1418 close : for "app\setting\airInfo.php" */
+
+/* ksg_20190909_2220 open : for "app\setting\filter.php" */
+/* 개별 필터 표시 스타일 구역 */
+.airState .classList {
+	margin : 0;
+}
+/* ksg_20190909_2220 close : for "app\setting\filter.php" */
+
+/* ksg_20190909_2332 open : for "app\setting\work.php"  */
+.airState .historyList {
+	margin : 0 -20px;
+}
+/* ksg_20190909_2332 close : for "app\setting\work.php"  */
+
+/* ksg_20190917_2213 open : for "app\setting\workInfo_reg.php" */
+/* :: 입력창 구역 */
+.workInfoGroup .sbox.half + .sbox.half {
+	margin-left: 7px;
+}
+.workInfoGroup .workMenu a.workMenuTitle {
+	background : none;
+}
+.timePickerBox {
+	text-align : left;
+}
+
+/* :: 작업분류 추가 구간 */
+.workTypeBox {
+	margin : 5px 0;
+	width : 100%;
+	text-align : left;
+	position : relative;
+}
+.workTypeBox + .workTypeBox {
+	padding-top : 0;
+}
+.btn.tableBtn {
+	width : 100%;
+	height : 35px;
+	line-height : 35px;
+	margin-bottom : 5px;
+}
+.categoryDel {
+	background: url(../img/icon_category_delete.png) no-repeat center / cover;
+    width: 16px;
+	height: 16px;
+	display: inline-block;
+	position : absolute;
+	top : 50%;
+	transform : translateY(-50%);
+	left : 91%;
+}
+.workRegSbox {
+	width : calc(45% - 5px);
+}
+
+/* ksg_20191004_1701 open : inner */
+.img_up_list {
+    margin: 0 4px;
+    font-size: 0;
+}
+.img_up_list .img_box:first-child {
+    border-color: #289bfe;
+}
+.img_up_list .img_box {
+    display: inline-block;
+    vertical-align: top;
+    margin: 4px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    position: relative;
+    padding-top : calc(50% - 8px);
+    width: calc(50% - 8px);
+}
+
+/* ksg_20191004_1713 open : inner */
+.img_up_list .img_box:before {
+	content : "이미지를 추가해주세요";
+	position : absolute;
+	top : 60%;
+	left : 50%;
+	text-align: center;
+	transform: translate(-50%, -50%);
+	width : 100%;
+	font-size: 14px;
+	font-weight : 500;
+}
+.img_up_list .img_box:after {
+	content : "";
+	position : absolute;
+	top : 35%;
+	left : 50%;
+	text-align: center;
+    width: 100%;
+    transform: translate(-50%, -50%);
+	background : url(/app/common/img/icon_photo.png) no-repeat center / 100% 100%;
+	width : 35px;
+	height : 30px;
+}
+/* ksg_20191004_1713 close : inner */
+
+.img_up_list .img_box .upload_btn {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 5;
+}
+.img_up_list .img_box canvas {
+	position : absolute;
+	top : 0;
+	left : 0;
+	width : 100%;
+	height : 100%;
+	z-index : 1;
+}
+.img_up_list .img_box img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+	z-index: 1;
+	display : none;
+}
+.img_up_list .img_box .del_btn {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    padding: 3px 5px;
+    opacity: 0.8;
+    z-index: 10;
+    background-color: #289bfe;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 16px;
+    color: #fff;
+}
+/* ksg_20191004_1701 close : inner */
+
+/* ksg_20190917_2213 close : for "app\setting\workInfo_reg.php" */
+
+/* ksg_20190917_2344 open : for "app\setting\classSetting.php" */
+/* :: 필터 숫자 표시 구간 */
+.settingList .settingMenu.filterSettingMenu {
+	position : relative;
+}
+.filterSettingMenu .filterCounter {
+	position : absolute;
+	right : 40px;
+	font-size : 16px;
+	top : 50%;
+	transform : translateY(-50%);
+}
+.filterSettingMenu .filterCounter span {
+	color : #e01a1a;
+}
+/* :: 모드 상태 표시 구간 */
+.settingList .settingMenu.modeSettingMenu {
+	position : relative;
+} 
+.modeSettingMenu .modeState {
+	position : absolute;
+	right : 40px;
+	top : 50%;
+	transform : translateY(-50%);
+}
+.modeSettingMenu .modeState span {
+	color : #0072ff;
+}
+.modeState .manualModeState {
+	font-size : 16px;
+}
+
+/* ksg_20191025_1845 open : for inner */
+.filterSettingMenu .filterCounter span.normal {
+	color : #85c042;
+}
+.filterSettingMenu .filterCounter span.normal + span {
+	color : #85c042;
+}
+.filterSettingMenu .filterCounter span.imminent {
+	color : #e01a1a;
+}
+.filterSettingMenu .filterCounter span.imminent + span {
+	color : #e01a1a;
+}
+.filterSettingMenu .filterCounter span.expired {
+	color : #909090;
+}
+.filterSettingMenu .filterCounter span.expired + span {
+	color : #909090;
+}
+/* ksg_20191025_1845 close : for inner */
+
+
+/* ksg_20190917_2344 close : for "app\setting\classSetting.php" */
+
+
+/* ksg_20191008_2113 open : for "app\setting\workInfo.php" */
+.setImg_none {
+    width: 100%;
+    height: 100%;
+    padding: 50px 0;
+    text-align: center;
+}
+/* ksg_20191010_1731 open : inner */
+/* 비디오 항목 스타일 구역 */
+.workInfoGroup .videoMenu span.video {
+	background: url(/app/common/img/icon_video.png) no-repeat center left / 19px 15px;
+}
+.workInfoGroup .workMenu.videoMenu {
+	border-bottom : 1px solid #e1e1e1;
+	width : 100%;
+	height : 100%;
+}
+
+.workInfoGroup .workMenu.videoMenu a {
+	border-bottom: none;
+    background: none;
+    cursor: default;
+    pointer-events: none;
+}
+.workInfoGroup .workMenu.videoMenu .videoBox {
+	display : block;
+	text-align : center;
+	width : 100%;
+	height : 100%;
+	padding : 0 15px 15px 15px;
+}
+.workInfoGroup .workMenu.videoMenu .videoBox iframe {
+	display : block;
+	width : 100%;
+	height : 100%;
+	min-height : 300px;
+}
+.videoBox .setVideo_none {
+	padding-bottom : 15px;
+}
+.titleBox .titleRight .headerControl i {
+    background: url(/app/common/img/icon_header_control_alt.png) no-repeat center / cover;
+    width: 20px;
+    height: 20px;
+}
+/* ksg_20191010_1731 close : inner */
+
+/* ksg_20191008_2113 close : for "app\setting\workInfo.php" */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* :: ksg_20200205_2215 open  */
+/* :: ksg_20200207_1513 추가 open   */
+.searchBox {
+	display : block;
+	position : relative;
+	font-size : 0;
+	padding-bottom : 10px;
+}
+.searchBox .searchIcon {
+	position : absolute;
+	top : 15px;
+	right : 15px;
+	width : 20px;
+	height : 20px;
+}
+.searchBox .searchIcon i {
+	background : url(/app/common/img/icon_header_search.png) center / cover;
+	width : 100%;
+	height : 100%;
+}
+
+.searchBox input {
+	border-radius : 10px;
+	width : 100%;
+	height : 50px;
+	font-size : 14px;
+	padding : 18px 15px;
+	border : 1px solid #e6e6e6;
+}
+footer .footerMenu {
+	display : inline-block;
+	width : 25%;
+}
+
+
+
+footer .footerMenu .text {
+	font-size : 13px;
+}
+footer .footerMenu .icon {
+	margin-bottom : 7px;
+	width : 20.5px;
+	height : 21.5px;
+}
+footer .footerMenu a .icon.home {
+	background : url(/app/common/img/footerIcon_home.png) center / cover;
+}
+footer .footerMenu a.on .icon.home {
+	background : url(/app/common/img/footerIcon_home_on.png) center / cover;
+}
+footer .footerMenu a .icon.search {
+	background : url(/app/common/img/footerIcon_search.png) center / cover;
+	width : 20px;
+	height : 20.5px;
+}
+footer .footerMenu a.on .icon.search {
+	background : url(/app/common/img/footerIcon_search_on.png) center / cover;
+	width : 20px;
+	height : 20.5px;
+}
+footer .footerMenu a .icon.favorite {
+	background : url(/app/common/img/footerIcon_favorite.png) center / cover;
+	width : 21.5px;
+	height : 20.5px;
+}
+footer .footerMenu a.on .icon.favorite {
+	background : url(/app/common/img/footerIcon_favorite_on.png) center / cover;
+	width : 21.5px;
+	height : 20.5px;
+}
+footer .footerMenu a .icon.menu {
+	background : url(/app/common/img/footerIcon_menu.png) center / cover;
+	width : 20.5px;
+	height : 20.5px;
+}
+footer .footerMenu a.on .icon.menu {
+	background : url(/app/common/img/footerIcon_menu_on.png) center / cover;
+	width : 20.5px;
+	height : 20.5px;
+}
+footer .footerMenu a.on .text {
+	color : #4d42e5;
+}
+
+.hamburgerWrap.footerHamburger {
+	height : calc(100% - 48px);
+	z-index : 99;
+}
+
+.hamburgerWrap.footerHamburger .hamburgerHeader {
+	background-color : #f6f6f6;
+	border-bottom : none;
+}
+.hamburgerWrap.footerHamburger .hamburgerList {
+	background-color : #f6f6f6;
+}
+.footerHamburger h1.logo {
+	line-height : 50px;
+}
+.hamburgerWrap.footerHamburger .hamburgerHeader .ic_close {
+	width : 21px;
+	height : 21px;
+}
+
+.footerHamburger .hamburgerList .hamburgerBox:first-child .hambergerTitle a {
+	border-radius : 10px 10px 0 0;
+}
+
+.footerHamburger .hamburgerList .hambergerTitle a {
+	padding : 0 20px 0 30px;
+}
+.hamburgerWrap.footerHamburger .csCallBox {
+	position : absolute;
+	margin-bottom : 0;
+}
+
+.footerHamburger .adminMark.adminConfirmed {
+	width : calc(100% - 30px);
+	border-radius : 7px;
+	height : 35px;
+	line-height : 35px;
+	text-align : center;
+	display : block;
+	font-size : 12px;
+	font-weight : 600;
+	position : absolute;
+	bottom : 134px;
+	left : 15px;
+}
+
+
+header .backBtn .ic_back_alt {
+    background: url(/app/common/img/icon_header_back_alt.png) no-repeat center / cover;
+    width: 10.5px;
+    height: 17.5px;
+    vertical-align: baseline;
+}
+
+header .adminModBtn {
+	position : absolute;
+	top : 0;
+	right : 15px;
+	padding : 19px 0;
+	font-size : 13px;
+	font-weight : 800;
+}
+
+
+
+
+.airStateTabs a.on .txt:after {
+	content: "";
+    position: absolute;
+    bottom: 0;
+    left: -7.5px;
+    height: 3px;
+    border-bottom: 3px solid #4d42e5;
+    width: 30px;
+}
+.imgLogo {
+	background : url(/app/common/img/icon_header_imgLogo.png) no-repeat center / 100%;
+	width : 137.5px;
+	height : 19.5px;
+}
+
+.searchCon {
+	margin : 20px auto 0;
+}
+.searchCon .searchSet {
+	margin : -20px -20px 0;
+	padding : 10px 20px 0 20px;
+	background-color : #fff;
+}
+.searchSet .calendarBox {
+	margin : 0 0 10px 0;
+	position : relative;
+}
+.calendarBox input {
+	width : 100%;
+	height : 35px;
+	padding : 12.5px 15px;
+	border : 1px solid #4d42e5;
+	border-radius : 7px;
+}
+.calendarBox .calendarIcon {
+	position : absolute;
+	top : 7.5px;
+	right : 15px;
+	z-index : -1;
+
+}
+.calendarBox .calendarIcon i {
+	background: url(/app/common/img/icon_calendar.png) no-repeat center / cover;
+	width : 18.5px;
+	height : 18px;
+}
+
+.searchSet .sbox select {
+	height : 50px;
+}
+
+.searchSet .searchRow + .searchRow {
+	margin-top : 9px;
+}
+.searchSet .sbox {
+	border-radius : 7px;
+}
+.searchSet .sbox.short + .tbox {
+	width : calc(100% - 142.5px);
+	margin-left : 10px;
+	height : 52px;
+	display : inline-block;
+	vertical-align : top;
+	border-radius : 7px;
+}
+.searchSet .sbox.short {
+	width : 127px;
+}
+
+.adminMain .btnBox {
+	position : initial;
+	margin-top : 25px;
+}
+
+.adminMain .btnBox .btn {
+	background-color : #4d42e5;
+	border-radius : 10px;
+}
+.container.monoBG {
+	background-color : #f6f6f6;
+}
+section.login .logoIcon {
+	background: url(/app/common/img/img_logo.png) no-repeat center / cover;
+	width : 197.5px;
+	height : 28px;
+}
+.loginGroup .subBox {
+	padding-top : 20px;
+	text-align : center;
+}
+.loginGroup ul.subBox li {
+	font-size : 13px;
+	display : inline-block;
+	padding-right : 15px;
+	margin-right : 15px;
+	color : #7f7f7f;
+	position : relative;
+}
+.loginGroup ul.subBox li:before {
+	content : "|";
+	position : absolute;
+	top : 0;
+	right : 0;
+}
+.loginGroup ul.subBox li:last-child {
+	padding-right : 0;
+	margin-right : 0;
+}
+.loginGroup ul.subBox li:last-child:before {
+	content : none;
+}
+
+.airVolumeList .optionRadio {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.airVolumeList .optionRadio input {
+    display: none;
+}
+.airVolumeList .optionRadio label span {
+    position: relative;
+    width: 56px;
+	height: 33px;
+	line-height : 33px;
+    border: none;
+	border-radius: 15px;
+	text-align : center;
+	padding : 0;
+	font-size : 15px;
+	font-weight : 400;
+}
+.airVolumeList .optionRadio label input:checked ~ span {
+	border: 2px solid #4d42e5;
+	color : #4d42e5;
+	line-height : 29px;
+}
+.schoolClassBox .classTitle {
+	background-color : #fff;
+}
+.classList .classStateBox:nth-child(n+4) {
+	margin-top : 10px;
+}
+.classList .classStateBox .className {
+	position : absolute;
+	top : 2.778vw;
+	left : 2.917vw;
+	font-size : 3.333vw;
+	font-weight : 700;
+}
+
+.classList .classStateBox .stateIcon {
+	position : absolute;
+	top : 8.472vw;
+	left : 9.444vw;
+	width : 9.722vw;
+	height : 9.722vw;
+}
+.classList .classStateBox.good .stateIcon {
+	background: url(/app/common/img/icon_classState_good.png) no-repeat center / cover;
+}
+.classList .classStateBox.normal .stateIcon {
+	background: url(/app/common/img/icon_classState_normal.png) no-repeat center / cover;
+}
+.classList .classStateBox.bad .stateIcon {
+	background: url(/app/common/img/icon_classState_bad.png) no-repeat center / cover;
+}
+.classList .classStateBox.worst .stateIcon {
+	background: url(/app/common/img/icon_classState_worst.png) no-repeat center / cover;
+}
+.classList .classStateBox .stateText {
+	position : absolute;
+	top : 20.139vw;
+	left : 0;
+	width : 100%;
+	text-align : center;
+	font-size : 3.333vw;
+	font-weight : 700;
+}
+.classList .classStateBox .stateType {
+	position : absolute;
+	top : 25.972vw;
+	left : 0;
+	font-size : 2.778vw;
+	font-weight : 500;
+	transform : none;
+	color : #000;
+	width : 100%;
+	text-align : center;
+}
+.classList .classStateBox .measure {
+	position : absolute;
+	top : 30.139vw;
+	left : 5.972vw;
+	font-size : 4.167vw;
+	font-weight : 800;
+}
+.csCallBox .csCallInfo .csTime pre {
+	color : #fff;
+}
+.classList .classStateBox .classState a {
+	position : absolute;
+	top : 0;
+	left : 0;
+	width : 100%;
+	height : 100%;
+	z-index : 10;
+}
+
+.errorInfoGroup table.setTable {
+	background-color : #fff;
+	border-radius : 10px;
+}
+
+.errorInfoGroup table.setTable th, 
+.errorInfoGroup table.setTable td {
+	border : none;
+	border-bottom : 1px solid #d7e2ff;
+}
+.errorInfoGroup table.setTable tr:last-child th, 
+.errorInfoGroup table.setTable tr:last-child td {
+	border-bottom : none;
+}
+.errorInfoGroup table.setTable th {
+	background-color : transparent;
+	border-right : 1px solid #d7e2ff;
+	color : #4d42e5;
+}
+.errorInfoGroup table.setTable th div {
+	color : inherit;
+}
+.statusIndicator {
+	position : fixed;
+	bottom : 55.5px;
+	left : 0;
+	width : 100%;
+	height : 41px;
+	line-height : 41px;
+	border-top: 1px solid #ccc;
+	background-color : #fff;
+	font-size : 0;
+	padding : 0 15px;
+}
+.statusIndicator div {
+	font-size : 10px;
+	display : inline-block;
+	position : relative;
+}
+.statusIndicator div:nth-child(1) {
+	width : 20%;	
+}
+.statusIndicator div:nth-child(2) {
+	width : 25%;
+	text-align : center;
+}
+.statusIndicator div:nth-child(3) {
+	width : 30%;
+	text-align : center;
+}
+.statusIndicator div:nth-child(4) {
+	width : 25%;
+	text-align : right;
+}
+.statusIndicator i {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+	border-radius: 50%;
+	padding-right : 6px;
+}
+.statusIndicator div.good i {
+    background-color: #0072ff;
+}
+.statusIndicator div.normal i {
+    background-color: #85c042;
+}
+.statusIndicator div.bad i {
+    background-color: #ffce00;
+}
+.statusIndicator div.worst i {
+    background-color: #e01a1a;
+}
+
+.titleBox .titleRight .calendarBtn i {
+	background: url(/app/common/img/icon_calendar.png) no-repeat center / cover;
+	width : 18.5px;
+	height : 18px;
+}
+.historyInfo .title {
+	font-size : 13px;
+	font-weight : 600;
+}
+.historyInfo .className {
+	font-size : 12px;
+}
+
+.popup.orderChangePop {
+	padding-top : 36px;
+	top : calc(50% - 27px);
+
+}
+
+.popupClose {
+	background : url(/app/common/img/icon_closeBtn_white.png) no-repeat center / cover;
+	width : 21px;
+	height : 21px;
+	position : absolute;
+	top : 0;
+	right : 15px;
+}
+
+.popup .btnBox {
+	position: initial;
+    margin-top: 11px;
+
+}
+.popup .btnBox .btn.big {
+	background-color: #4d42e5;
+	border-radius: 10px;
+	height: 55px;
+    line-height: 55px;
+    font-size: 18px;
+}
+.airStateBox.half .stateInfo.airCondition .row:after {
+	background: #fff url(/app/common/img/icon_box_arrow_right.png) no-repeat center / cover;
+	width : 17px;
+	height : 17px;
+	content: "";
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.airState .deviceStatus {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 100%;
+	height: 50px;
+	font-size: 16px;
+	font-weight: 500;
+	margin : 15px 0 15px 0;
+	position : relative;
+}
+.airState .deviceStatus:before {
+	content : "";
+	background: #fff url(/app/common/img/icon_box_arrow_right.png) no-repeat center / cover;
+	width : 17px;
+	height : 17px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.airState .deviceStatus a {
+    display: inline-block;
+    position: relative;
+    width: calc(100% - 40px);
+	height: 100%;
+	line-height : 50px;
+	padding-left : 15px;
+	/* padding: 25px 0 25px 28px; */
+
+}
+.airState .deviceStatus a div {
+    right: 10px;
+	position: absolute;
+	top : 50%;
+	transform : translateY(-50%);
+	-webkit-transform : translateY(-50%);
+}
+.airStateBox .refreshBtn {
+	position : absolute;
+	top : 15px;
+	right : 15px;
+	font-size : 12px;
+	text-align : center;
+	z-index : 1;
+}
+.refreshBtn i {
+	background : url(/app/common/img/icon_refresh.png) no-repeat center / 15.5px 15px;
+	width : 16px;
+	height : 15px;
+	margin-bottom : 4px;
+}
+
+
+.airState .airStateBox .mainStatus {
+	padding : 56px 0 0 0;
+	width : 100%;
+	text-align : center;
+	height : 76.111vw;
+	position : relative;
+}
+
+.airStateBox .mainStatus .statusBack {
+	width : 100%;
+	height : 60.556vw;
+	/* background : url(/app/common/img/img_statusBack_yellow.png) no-repeat center / auto 60.556vw; */
+	position : absolute;
+	top : 15.556vw;
+	left : 0;
+	z-index : 5;
+}
+.airStateBox.status_bad .mainStatus .statusBack {
+	background : url(/app/common/img/img_statusBack_bad.png) no-repeat center / auto 60.556vw;
+}
+.airStateBox.status_worst .mainStatus .statusBack {
+	background : url(/app/common/img/img_statusBack_worst.png) no-repeat center / auto 60.556vw;
+}
+
+.mainStatus .statusText {
+	position :absolute;
+	top : 35.389vw;
+	left : 34.250vw;
+	z-index : 10;
+	font-size : 10px; 
+}
+.mainStatus .statusText .measurement {
+	padding-bottom : 4.444vw;
+}
+.mainStatus .statusText .measurement .num {
+	font-size : 6.944vw;
+	font-weight : 800;
+}
+.mainStatus .statusText .measurement .gauge {
+	font-size : 3.333vw;
+	padding-top : 1.667vw;
+}
+.mainStatus .statusText .statusType {
+	font-size : 3.611vw;
+	font-weight : 600;
+}
+.mainStatus .statusText .statusGrade {
+	padding-top : 1.667vw;
+	font-size : 5vw;
+	font-weight : 600;
+	/* color : #ffc000; */
+}
+.status_bad .mainStatus .statusText .statusGrade {
+	color : #ffc000;
+}
+.status_worst .mainStatus .statusText .statusGrade {
+	color : #fe4559;
+}
+
+
+.airStateBox ul.statusGroup {
+	padding-top : 6.944vw;
+	padding-bottom : 4.167vw;
+	width : 100%;
+	font-size : 0;
+}
+.airStateBox ul.statusGroup li {
+	display : inline-block;
+	width : 25%;
+	font-size : 11px;
+	text-align : center;
+	border-right : 1px solid #ccc;
+}
+.airStateBox ul.statusGroup li:last-child {
+	border-right : none;
+}
+.airStateBox ul.statusGroup li .statusType {
+	font-size : 3.611vw;
+	padding-bottom : 1.389vw;
+}
+.airStateBox ul.statusGroup li .meaureMent {
+	font-size : 4.167vw;
+}
+.airStateBox ul.statusGroup li i.temperature {
+	background : url(/app/common/img/icon_status_temperature.png) no-repeat center / cover;
+	width : 2.500vw;
+	height : 4.306vw;
+	vertical-align : top;
+	margin-right : 0.833vw;
+}
+.airStateBox ul.statusGroup li i.humidity {
+	background : url(/app/common/img/icon_status_humidity.png) no-repeat center / cover;
+	width : 3.056vw;
+	height : 4.167vw;
+	vertical-align : top;
+	margin-right : 0.833vw;
+}
+
+
+.airStateBox.locationSet {
+	margin : -15px 0 0 0;
+	height : 40px;
+	width : 100%;
+	padding : 0 15px;
+	font-size : 14px;
+	border-radius : 10px 10px 0 0;
+	border-bottom : none;
+}
+.locationMark {
+	background : url(/app/common/img/icon_targetMark.png) no-repeat center / 15px 15px;
+	width : 15px;
+	height : 40px;
+	vertical-align : top;
+	margin-right : 3px;
+}
+.locationSet span {
+	line-height : 40px;
+}
+.locationSet span.title {
+	padding-right : 20px;
+}
+.locationSet .modifyBtn {
+	float : right;
+}
+.locationSet .modifyBtn i {
+	background : url(/app/common/img/icon_header_control_alt.png) no-repeat center / 20px 20px;
+	width : 20px;
+	height : 40px;
+}
+.airStateBox.statusBG.status_bad {
+	background-color : #fff7d7;
+} 
+.airStateBox.statusBG.status_worst {
+	background-color : #ffe2e3;
+}
+.airStateBox + .setList {
+	padding-top : 15px;
+	padding-bottom : 55px;
+}
+section.airState .chartBox.statusChart canvas {
+	/* width:91.667vw !important;
+	height:55.556vw !important; */
+	margin-bottom : 75px;
+}
+.airStateDate input.calendarInput:read-only {
+	border : 1px solid #867de8;
+	background-color : transparent;
+	font-size : 12px;
+	color : #000;
+	font-weight : 500;
+	height : 35px;
+}
+.datepickArrowPrev {
+	background: url(/app/common/img/icon_box_arrow_left.png) no-repeat center / cover;
+	width : 17px;
+	height : 17px;
+}
+
+.datepickArrowNext {
+	background: url(/app/common/img/icon_box_arrow_right.png) no-repeat center / cover;
+	width : 17px;
+	height : 17px;
+}
+
+
+.popup.dateSelectPop {
+	padding : 0;
+	width : calc(100% - 30px);
+	border-radius : 0 0 10px 10px;
+	top : calc(50% - 36px);
+}
+.popupCon.datepickerCon {
+	padding : 10px;
+	border-radius : 10px 10px 0 0;
+}
+.popup.dateSelectPop .btnBox {
+	margin-top : 0;
+	background-color : #fff;
+}
+.popup .btnBox.closeBtnBox {
+	margin-top: 0;
+	background-color : transparent;
+	position : relative;
+	top : 0;
+	left : 0;
+	height : 36px;
+}
+.popup .btnBox.closeBtnBox .btn.closePop {
+	position : absolute;
+	top : 0;
+	right : 0;
+	width: 21px;
+	height : 21px;
+	line-height : auto;
+	font-size : 0;
+	background: url(/app/common/img/icon_closeBtn_white.png) no-repeat center / cover;
+}
+section.airState .chartBox.deviceChart canvas {
+	width:91.667vw !important;
+	height:55.556vw !important;
+}
+.tableBox.calendarBox .listTable {
+	border-radius : 10px;
+	overflow : hidden;
+	position : relative;
+}
+.tableBox.calendarBox .listTable:before {
+	content : "";
+	border : 1px solid #4d42e5;
+	border-radius : 10px;
+	position : absolute;
+	top : 0;
+	left : 0;
+	width : calc(100% - 2px);
+	height : calc(100% - 2px);
+}
+.tableBox .periodUnit {
+    font-size: 14px;
+    padding: 2px 0 12px 0;
+    margin-left: 10px;
+}
+.airStateDate.monthlyAir .dateTxt {
+	width : calc(100% - 20px);
+	display : block;
+	padding : 12px 0;
+	margin : 0 auto;
+	border-radius : 10px;
+	font-size : 12px;
+}
+.airStateDate.monthlyAir .prevBtn {
+	position: absolute;
+	left: 25px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.airStateDate.monthlyAir .ic_prevBtn {
+	background: #fff url(/app/common/img/icon_box_arrow_left.png) no-repeat center / cover;
+    width: 17px;
+    height: 17px;
+}
+.airStateDate.monthlyAir .nextBtn {
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.airStateDate.monthlyAir .ic_nextBtn {
+    background: #fff url(/app/common/img/icon_box_arrow_right.png) no-repeat center / cover;
+    width: 17px;
+    height: 17px;
+}
+.tableBox.dailyBox {
+	margin: 0;
+	background-color : #fff;
+	padding: 0 10px 10px 10px;
+	border-radius : 0 0 10px 10px;
+}
+.tableBox.dailyBox .listTable {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.tableBox.dailyBox .listTable:before {
+    content: "";
+    border: 1px solid #4d42e5;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+}
+.tableBox.dailyBox .listTable td {
+	padding : 0;
+}
+.tableBox.dailyBox .listTable td div:first-child {
+	line-height : 38px;
+	height : 38px;
+	border-bottom : 1px solid #e1e1e1;
+	color : #4d42e5;
+}
+.tableBox.dailyBox .listTable td div:last-child {
+	line-height : 30px;
+	height : 30px;
+}
+/* :: ksg_20200207_1513 추가 close   */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* :: 20200205_2221 중복 open */
+.contents {
+	min-height: 100%;
+	padding: 20px 15px;
+}
+
+header {
+	background-color : #f6f6f6;
+}
+.setList .setBox a.highSchool .top {
+    background: none;
+}
+.setList .setBox a .top {
+	padding-left : 0;
+}
+.setList .setBox {
+	background : none;
+	background-color : #fff;
+	border-radius : 10px;
+}
+.setList .setBox .bottom {
+	text-align : right;
+}
+.setList .setBox .bottom .min {
+	color : #000;
+	font-size : 15px;
+	font-weight : 600;
+}
+
+.titleBox {
+	margin: -20px -15px 0;
+	background-color : #f6f6f6;
+	position: relative;
+	font-size : 15px;
+	font-weight: 700;
+	padding: 15px 20px;
+	height : 45px;
+}
+
+
+
+
+
+.titleBox .titleLeft, 
+.titleBox .titleRight {
+	color : #000;
+}
+.pageTabs a.box-2.stateType_co2:before {
+	background : none;
+}
+.pageTabs a.on.box-2.stateType_co2:before {
+	background : none;
+}
+.pageTabs a.box-2.stateType_dust:before {
+    background: none;
+}
+.pageTabs a.on.box-2.stateType_dust:before {
+    background: none;
+}
+.pageTabs a.box-2.stateType_superDust:before {
+    background: none;
+}
+.pageTabs a.on.box-2.stateType_superDust:before {
+    background: none;
+}
+.pageTabs a.box-2.stateType_voc:before {
+    background: none;
+}
+.pageTabs a.on.box-2.stateType_voc:before {
+    background: none;
+}
+.pageTabs a.box-2.stateType_radon:before {
+    background: none;
+}
+.pageTabs a.on.box-2.stateType_radon:before {
+    background: none;
+}
+.pageTabs a.box-2:before {
+	content : none;
+}
+.pageTabs a.box-2 span {
+	position : initial;
+    width: 100%;
+    font-size: 16px;
+    line-height: 16px;
+}
+.pageTabs a.box-2 {
+    position : initial;
+    padding-top : 0;
+    height: auto;
+    width: 20%;
+}
+.pageTabs a {
+	font-weight : 400;
+}
+.pageTabs a.on.box-2 span {
+	color : #4d42e5;
+	font-weight : 700;
+}
+.airStateTabs {
+	font-size: 0;
+	overflow: hidden;
+	border-radius : 0;
+	border : none;
+	margin: 20px 0 10px 0;
+	background-color : #edf1fd;
+}
+
+
+.airStateTabs a:before {
+	content : none;
+}
+.airStateTabs a.on:after {
+    content: none;
+}
+.airStateTabs a.on .txt {
+	color: #000;
+	font-weight : 700;
+}
+.sbox:after {
+	background: url(/app/common/img/icon_sbox_arrow_alt.png) no-repeat center / cover;
+	width : 17px;
+	height : 17px;
+}
+.airVolumeList {
+	margin : 0 -20px;
+}
+.schoolStateList .schoolClassBox.on .classTitle a {
+	background : url(/app/common/img/icon_hideBtn_alt.png) no-repeat center right 20px / 17px 17px;
+}
+.schoolStateList .classTitle a {
+	background : url(/app/common/img/icon_showBtn_alt.png) no-repeat center right 20px / 17px 17px;
+}
+.schoolStateList .classInfo {
+	padding : 10px 15px;
+	margin : 0;
+}
+.classList {
+	margin : 0 -5px;
+}
+.classList .classStateBox {
+	width: calc(33.33% - 10px);
+    margin: 0 5px;
+}
+.classList .classStateBox .classState {
+	background : none;
+	background-color : #fff;
+	padding-top : 130%;
+}
+
+
+/* .classList .classStateBox.good .classState{
+	background-color: #0072ff;
+}
+.classList .classStateBox.normal .classState{
+	background-color: #85c042;
+}
+.classList .classStateBox.bad .classState{
+	background-color: #ffce00;
+}
+.classList .classStateBox.worst .classState{
+	background-color: #e01a1a;
+}
+.classList .classStateBox.off .classState{
+	background-color: #909090;
+} */
+
+
+/* .schoolStateList .schoolClassBox .stateType {
+	font-size : 10px;
+	position : absolute;
+	bottom : 10px;
+	left : 50%;
+	transform : translateX(-50%);
+	color : #fff;
+	text-align : center;
+	width : 100%;
+} */
+
+.schoolState .schoolStateList {
+	margin-bottom : 0;
+}
+.csCallBox {
+	position: initial;
+	padding: 25px 20px;
+	margin-bottom : 55.5px;
+	border-radius : 10px 10px 0 0;
+	background-color : #4d42e5;
+}
+.csCallBox .csCallLink .csCallNumber {
+	color : #fff;
+}
+.errorInfo div:first-child {
+    width: 66%;
+}
+.errorInfo div:last-child {
+    text-align: right;
+    width: 26%;
+}
+.errorList .errorInfoGroup {
+	padding : 10px 15px;
+	background-color : #f6f6f6;
+}
+.historyList {
+	margin : 0;
+}
+.historyList .historyBox {
+	background: #fff url(/app/common/img/icon_box_arrow_right.png) no-repeat top 15px right 15px/ 17px 17px;
+	border-bottom: none;
+	border-radius : 10px;
+}
+.historyList .historyBox + .historyBox {
+	margin-top : 10px;
+}
+.historyInfo:first-child {
+	width : 100%;
+}
+.historyInfo:last-child {
+    width: 100%;
+	line-height: 16px;
+	padding-top : 15px;
+	font-size : 11px;
+}
+.hamburgerList .hambergerTitle a {
+	background: #fff url(/app/common/img/icon_box_arrow_right.png) no-repeat top 15px right 15px/ 17px 17px;
+}
+
+footer {
+	border-radius : 10px 10px 0 0;
+}
+a.favorite {
+	z-index : 50;
+}
+
+.airStateBox {
+	background-color : #fff;
+	margin: 0 -20px;
+	padding: 0 15px;
+	border-bottom: 1px solid #e1e1e1;
+}
+
+.airStateBox.horizontalState {
+	margin : 0;
+}
+
+.airStateBox.statusBG .stateTit.deviceStatus {
+	left : 15px;
+	bottom : 15px;
+	background-color : #fff;
+	border-radius : 10px;
+	width : calc(100% - 30px);
+	height : 50px;
+}
+.airStateBox .stateTit a {
+	padding : 25px 0 25px 28px;
+}
+.airStateBox .stateTit a.device {
+	background : none;
+}
+.deviceState.OFF:before {
+	background : none;
+}
+.airStateBox.statusBG .stateTit a:before {
+	background: #fff url(/app/common/img/icon_box_arrow_right.png) no-repeat center / cover;
+	width : 17px;
+	height : 17px;
+}
+.deviceState {
+	padding-left : 0;
+}
+.airStateBox.statusBG .stateTit a div {
+	right : 10px;
+}
+
+.airStateBox.half .stateInfo.airCondition .row .subject {
+	padding-left : 0;
+}
+.airStateBox.half .stateInfo.airCondition .row .subject.co2:after {
+	background : none;
+}
+.airStateBox.half .stateInfo.airCondition .row .subject.dust:after {
+	background : none;
+}
+.airStateBox.half .stateInfo.airCondition .row .subject.superDust:after {
+    background: none;
+}
+.airStateBox.half .stateInfo.airCondition .row .subject.radon:after {
+    background: none;
+}
+.airStateBox.half .stateInfo.airCondition .row .subject.voc:after {
+    background: none;
+}
+
+div.updateTime {
+	padding-bottom : 10px;
+	margin-bottom : 35px;
+	background-color : #4d42e5;
+	width : calc(100% + 40px);
+	margin-left : -20px;
+	padding-right : 15px;
+}
+div.updateTime span {
+	color : #fff;
+}
+.airStateBox.statusBG {
+	/* background-color : #fff7d7; */
+	padding-bottom: 0;
+	position : relative;
+	border-bottom : none;
+	border-radius : 0 0 10px 10px;
+	margin : 0;
+	padding : 0;
+}
+.airStateBox.horizontalState .stateInfo .row .subject {
+	font-weight : 500;
+	font-size : 12px;
+}
+.airStateBox .stateInfo .row .con {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 12px;
+}
+.pageTabs.devicePowerTabs {
+    vertical-align : top;
+	font-size : 16px;
+	line-height : 30px;
+	width : 100%;
+	position : relative;
+	margin : -13px 0 7px 0;
+}
+.pageTabs.devicePowerTabs .deviceSetting a.btn {
+	padding : 8px;
+	line-height : 12px;
+	font-size : 12px;
+	vertical-align : middle;
+	width : 80px;
+	font-weight : 500;
+	border-radius : 7px;
+}
+section.airState .chartBox {
+	position : relative;
+	background-color : #fff;
+	border-radius : 10px;
+	padding-bottom : 20px;
+}
+.deviceStateTabs {
+	font-size: 0;
+	overflow: hidden;
+	border-radius: 15px 15px 0 0;
+	margin: 20px 0 0 0;
+	background-color : #edf1fd;
+}
+.deviceStateTabs a.on:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+	top: 0;
+	border-bottom: 2px solid #4d42e5;
+	margin: 0 auto;
+	width : 25px;
+}
+/* .deviceStateTabs a:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 5px;
+    bottom: 5px;
+    background-color: #e1e1e1;
+    width: 1px;
+} */
+/* .deviceStateTabs a.on .txt {
+    color: #fff;
+} */
+
+.tableBox.calendarBox {
+	margin: 0;
+	background-color : #fff;
+	padding : 0 10px 10px 10px;
+	border-radius : 0 0 10px 10px;
+}
+.airStateDate.monthlyAir {
+	padding : 10px 0;
+	background-color : #fff;
+}
+
+
+/* :: 20200205_2221 중복 close */
+
+/* :: ksg_20200205_2215 close  */
